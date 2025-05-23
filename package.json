@@ -1,0 +1,17 @@
+{
+  "name": "advanced-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass --watch sass/main.scss css/index.css",
+    "kit": "sass --watch sass/kit.scss css/kit.css"
+  },
+  "keywords": [],
+  "author": "Dan Hariton",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "sass": "^1.89.0"
+  }
+}
