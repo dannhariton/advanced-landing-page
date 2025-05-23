@@ -16,3 +16,25 @@ $color-white: #ffffff;
 $color-gray-1: #e0e3eb;
 $color-gray-2: #888b97;
 $color-gray-3: #626687;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%; //1rem =10, 10px/16px = 62.5%
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
