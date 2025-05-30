@@ -29,12 +29,23 @@ $color-gray-3: #626687;
 }
 
 html {
-  box-sizing: inherit;
   font-size: 62.5%; //1rem =10, 10px/16px = 62.5%
 }
 
 body {
   font-family: "Lexend", sans-serif;
-  display: flex;
-  flex-direction: column;
+}
+
+button {
+  font-size: inherit;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  font-family: inherit;
 }
