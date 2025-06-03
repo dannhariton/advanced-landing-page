@@ -1,3 +1,6 @@
-@forward "../sass/base";
-@forward "../sass/components";
-@forward "../sass/typography";
+@use "../sass/base";
+@use "../sass/components";
+@use "../sass/typography";
+@use "../sass/layout";
+@use "../sass/hero-section";
+@use "../sass/utils";
