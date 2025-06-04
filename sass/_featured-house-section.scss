@@ -1,0 +1,29 @@
+@use "base" as *;
+
+.featured-house {
+  min-height: 66.5rem;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+
+    &-heading {
+      color: $color-black;
+    }
+
+    &__filter-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.7rem;
+    }
+
+    &__slider-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+    }
+  }
+
+  &__cards-container {
+  }
+}
