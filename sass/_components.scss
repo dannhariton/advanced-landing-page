@@ -19,9 +19,13 @@
     padding: 1.2rem 2.4rem;
   }
 
-  &-icon--arrow {
+  &__icon {
     height: 2.4rem;
     width: 2.4rem;
+
+    &--inverted {
+      transform: rotate(180deg);
+    }
   }
 
   &-primary-icon {
@@ -173,6 +177,20 @@
   }
 }
 
+.section-label {
+  color: $color-secondary;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 3.2rem;
+    height: 1px;
+    background-color: $color-secondary;
+
+    transform: translate(-4rem, 0.8rem);
+  }
+}
+
 .input {
   background-color: $color-white;
   border-radius: 10rem;
@@ -278,6 +296,68 @@
 
     &__subheading {
       color: #68799f;
+    }
+  }
+}
+
+.house-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  &__image {
+    width: 37.6rem;
+    height: 38.2rem;
+    border-radius: 2.4rem;
+  }
+
+  &__label {
+    position: absolute;
+    z-index: 10;
+    top: 33.2rem;
+    left: 1.6rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    &-title {
+      color: $color-black;
+    }
+
+    &-price {
+      color: $color-gray-3;
+      font-weight: 500;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    &-image {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+    }
+
+    &-information {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    &-name {
+      color: $color-black;
+      line-height: 2.4rem;
+    }
+
+    &-location {
+      color: $color-gray-2;
     }
   }
 }
