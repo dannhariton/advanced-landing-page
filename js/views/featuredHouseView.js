@@ -1,7 +1,7 @@
 import View from "../views/View.js";
 
 export default class FeaturedHouseView extends View {
-  _parentElement = document.querySelector(".featured-house__cards-container");
+  _parentElement = document.querySelector(".featured-house__cards");
 
   render(data) {
     const markup = this._generateMarkup(data);
@@ -65,10 +65,23 @@ export default class FeaturedHouseView extends View {
 
     const prevSlide = function () {
       if (currentSlide === 0) {
-        currentSlide = maxSlide - 3;
+        prevBtn.disabled = true;
       } else {
         currentSlide--;
       }
+
+      prevBtn.disabled = false;
+      nextBtn.classList.remove("btn--outline");
+      prevBtn.classList.remove("btn--outline");
+
+      if (currentSlide === 0) {
+        prevBtn.classList.add("btn--outline");
+        nextBtn.classList.remove("btn--outline");
+      } else if (currentSlide === maxSlide - 3) {
+        prevBtn.classList.remove("btn--outline");
+        nextBtn.classList.add("btn--outline");
+      }
+
       slides.forEach((s, i) => {
         s.style.transform = `translateX(${(i - currentSlide) * 100}%)`;
       });
@@ -76,10 +89,24 @@ export default class FeaturedHouseView extends View {
 
     const nextSlide = function () {
       if (currentSlide === maxSlide - 3) {
-        currentSlide = 0;
+        nextBtn.disabled = true;
       } else {
         currentSlide++;
       }
+
+      nextBtn.disabled = false;
+      nextBtn.classList.remove("btn--outline");
+      prevBtn.classList.remove("btn--outline");
+
+      if (currentSlide === 0) {
+        prevBtn.classList.add("btn--outline");
+        nextBtn.classList.remove("btn--outline");
+      }
+      if (currentSlide === maxSlide - 3) {
+        prevBtn.classList.remove("btn--outline");
+        nextBtn.classList.add("btn--outline");
+      }
+
       slides.forEach((s, i) => {
         s.style.transform = `translateX(${(i - currentSlide) * 100}%)`;
       });
@@ -87,5 +114,29 @@ export default class FeaturedHouseView extends View {
 
     prevBtn.addEventListener("click", prevSlide);
     nextBtn.addEventListener("click", nextSlide);
+  }
+
+  changeButtonState(buttons, clickedButton) {
+    buttons.forEach((btn) => {
+      btn.disabled = false;
+      btn.classList.remove("btn--active");
+    });
+
+    clickedButton.classList.add("btn--active");
+    clickedButton.disabled = true;
+  }
+
+  filterButtons(handler) {
+    const filterBtns = document.querySelectorAll(".btn--filter");
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        this._parentElement.innerHTML = "";
+        const type = e.target.dataset.filter;
+        handler(type);
+        this.changeButtonState(filterBtns, e.target);
+      });
+    });
   }
 }

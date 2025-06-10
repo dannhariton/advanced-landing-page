@@ -3,17 +3,23 @@ import FeaturedHouseView from "./views/featuredHouseView.js";
 
 const featuredHouseView = new FeaturedHouseView();
 
-const controlHouseCards = async function () {
-  const data = await model.handleHouseData();
-  featuredHouseView.render(data);
-};
+const controlHouseCards = async function (type) {
+  let data = await model.handleHouseData();
 
-const controlHouseCardsButtons = async function () {
+  if (type === "villa") {
+    data = await model.handleVillaData();
+  }
+
+  if (type === "apartment") {
+    data = await model.handleApartmentData();
+  }
+
+  featuredHouseView.render(data);
   featuredHouseView.sliderButtons();
 };
 
 const init = async function () {
   await controlHouseCards();
-  controlHouseCardsButtons();
+  featuredHouseView.filterButtons(controlHouseCards);
 };
 init();
