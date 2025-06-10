@@ -301,10 +301,11 @@
 }
 
 .house-card {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  padding-right: 3.2rem;
 
   &__image {
     width: 37.6rem;
