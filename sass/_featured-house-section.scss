@@ -24,6 +24,8 @@
     }
   }
 
-  &__cards-container {
+  &__cards {
+    position: relative;
+    margin-top: 3.6rem;
   }
 }
