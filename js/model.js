@@ -3,3 +3,15 @@ export async function handleHouseData() {
   const json = await response.json();
   return json;
 }
+
+export async function handleVillaData() {
+  const response = await fetch("./js/data/villa.json");
+  const json = await response.json();
+  return json;
+}
+
+export async function handleApartmentData() {
+  const response = await fetch("./js/data/apartment.json");
+  const json = await response.json();
+  return json;
+}
