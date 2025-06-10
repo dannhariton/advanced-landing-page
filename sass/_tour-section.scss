@@ -1,0 +1,45 @@
+@use "base" as *;
+
+.tour-section {
+  min-height: 45.9rem;
+  display: flex;
+
+  &__left-side {
+    display: flex;
+    flex-direction: column;
+    margin: 2.8rem 18rem 2.7rem 0;
+    width: 50%;
+    gap: 3.2rem;
+
+    &__headline {
+      &__heading {
+        color: $color-black;
+      }
+
+      &__text {
+        color: $color-gray-2;
+        opacity: 0.75;
+        padding-top: 1.6rem;
+      }
+    }
+
+    &__details-container {
+    }
+
+    &__details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      &__item {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__right-side {
+    &__image {
+      width: 12rem;
+    }
+  }
+}
