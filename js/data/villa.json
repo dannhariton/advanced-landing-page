@@ -1,22 +1,5 @@
 [
   {
-    "houseImageURL": "assets/images/houses/roselands-house.webp",
-    "label": {
-      "name": "Popular",
-      "type": "popular",
-      "icon": "fire"
-    },
-    "title": "Roselands House",
-    "price": "$ 35.000.000",
-    "userInformation": {
-      "name": "Dianne Russell",
-      "location": "Manchester, Kentucky",
-      "userImageURL": "assets/images/avatars/avatar-20.webp",
-      "type": "villa"
-    }
-  },
-
-  {
     "houseImageURL": "assets/images/houses/woodlandside.webp",
     "label": {
       "name": "New House",
