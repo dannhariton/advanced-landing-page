@@ -38,7 +38,8 @@
     flex-direction: row-reverse;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 1px solid $color-primary-dark;
     background-color: $color-primary-dark;
   }
@@ -48,7 +49,8 @@
     color: $color-primary-dark;
     border: 1px solid $color-primary-dark;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $color-primary-light;
       color: $color-primary-dark;
       border: 1px solid $color-primary-dark;
@@ -57,11 +59,12 @@
 
   &--active {
     background-color: $color-primary-light;
-    border: $color-primary-light;
     color: $color-primary;
+    border: 1px solid $color-primary-light;
 
-    &:hover {
-      border: none;
+    &:hover,
+    &:focus {
+      border: 1px solid $color-primary-light;
       background-color: $color-primary-light;
     }
   }
@@ -305,12 +308,13 @@
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  padding-right: 3.2rem;
+  transition: all 0.5s ease-out;
 
   &__image {
-    width: 37.6rem;
     height: 38.2rem;
     border-radius: 2.4rem;
+    width: 100%;
+    object-fit: cover;
   }
 
   &__label {
