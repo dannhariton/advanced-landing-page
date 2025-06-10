@@ -1,3 +1,7 @@
-body {
-  background-color: white;
-}
+@use "../sass/base";
+@use "../sass/components";
+@use "../sass/typography";
+@use "../sass/layout";
+@use "../sass/hero-section";
+@use "../sass/featured-house-section";
+@use "../sass/utils";
