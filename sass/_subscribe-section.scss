@@ -1,0 +1,147 @@
+@use "base" as *;
+
+.subscribe {
+  min-height: 31.2rem;
+
+  &-container {
+    height: 31.2rem;
+    background-image: url(/assets/images/subscribe-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 3.2rem;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__main-content {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__heading {
+    color: $color-black;
+    text-align: center;
+  }
+
+  &__email {
+    width: 110%;
+  }
+
+  &__image {
+    border: 2px solid $color-white;
+    border-radius: 2.4rem;
+    object-fit: cover;
+    position: absolute;
+
+    &--1 {
+      top: 3.8rem;
+      left: 4rem;
+      width: 8.1rem;
+      height: 8.1rem;
+    }
+
+    &--2 {
+      top: 7.1rem;
+      left: 20rem;
+      width: 3.6rem;
+      border-radius: 2rem;
+    }
+
+    &--3 {
+      bottom: 10.3rem;
+      left: 6.3rem;
+      width: 3.6rem;
+      border-radius: 2rem;
+    }
+
+    &--4 {
+      bottom: 8rem;
+      left: 19.1rem;
+      width: 5.4rem;
+      height: 5.4rem;
+    }
+
+    &--5 {
+      top: 10.7rem;
+      right: 7.8rem;
+      width: 3.6rem;
+      border-radius: 2rem;
+    }
+
+    &--6 {
+      top: 14.3rem;
+      right: 19.6rem;
+      width: 3.6rem;
+      border-radius: 2rem;
+    }
+
+    &--7 {
+      top: 4.4rem;
+      right: 19.6rem;
+      width: 7rem;
+      height: 7rem;
+    }
+
+    &--8 {
+      bottom: 6rem;
+      right: 6rem;
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+  }
+}
+
+.email {
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__icon {
+    margin-left: 1.6rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    color: $color-info;
+    flex-shrink: 0;
+  }
+
+  &__box {
+    width: 50%;
+    margin: 0 1.6rem;
+    background-color: transparent;
+    border: none;
+    line-height: 2.2rem;
+    text-overflow: ellipsis;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  position: relative;
+
+  &__error {
+    color: $color-danger;
+    padding-left: 2.8rem;
+    padding-top: 0.8rem;
+    position: absolute;
+    z-index: 11;
+    visibility: hidden;
+    transform: translateY(3rem) translateX(4rem);
+  }
+
+  &__box:invalid:focus {
+    border: 1px solid red;
+  }
+
+  &__box:invalid:focus ~ &__error {
+    visibility: visible;
+  }
+}
