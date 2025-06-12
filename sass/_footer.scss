@@ -1,0 +1,88 @@
+@use "base" as *;
+
+.footer {
+  min-height: 29.7rem;
+  display: flex;
+  position: relative;
+
+  &__information {
+    padding-right: 13.4rem;
+    width: 47.5%;
+  }
+
+  &__main-logo {
+    width: 11.5rem;
+    height: 3.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__socials {
+    margin-top: 2.4rem;
+  }
+
+  &__logo {
+    cursor: pointer;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 2.4rem;
+    color: $color-black;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      color: $color-primary;
+    }
+  }
+
+  &__menus {
+    display: flex;
+  }
+
+  &__subtitle {
+    margin-bottom: 2.4rem;
+  }
+
+  &__property {
+    min-width: 17.2rem;
+    padding-right: 3.2rem;
+    display: flex;
+
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__article {
+    padding-right: 3.2rem;
+    min-width: 17.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__contact {
+    min-width: 17.2rem;
+    display: flex;
+
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__link {
+    color: $color-gray-2;
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+  }
+
+  .blur-bg {
+    &--3 {
+      position: absolute;
+      z-index: -10;
+      right: -30%;
+      top: -65%;
+    }
+  }
+}
