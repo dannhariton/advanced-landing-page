@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass --watch sass/main.scss css/index.css",
+    "build": "sass --watch sass/main.scss css/main.css",
     "kit": "sass --watch sass/kit.scss css/kit.css"
   },
   "keywords": [],
