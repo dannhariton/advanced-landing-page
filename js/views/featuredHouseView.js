@@ -135,7 +135,7 @@ export default class FeaturedHouseView extends View {
         this._parentElement.innerHTML = "";
         const type = e.target.dataset.filter;
         handler(type);
-        this.changeButtonState(filterBtns, e.target);
+        this.changeButtonState(filterBtns, btn);
       });
     });
   }
