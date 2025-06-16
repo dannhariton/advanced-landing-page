@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hounter</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +14,207 @@
     <script type="module" src="/js/index.js"></script>
   </head>
   <body>
-    Find your next favorite house!
+    <!-- <div class="container"> -->
+    <header class="header">
+      <svg class="navigation__logo">
+        <use href="/assets//logos.svg#logo"></use>
+      </svg>
+
+      <nav class="navigation">
+        <div class="navigation__container">
+          <a
+            href="#"
+            class="nav__link label-style-text label-style-text--semibold"
+          >
+            About Us
+          </a>
+          <a
+            href="#"
+            class="nav__link label-style-text label-style-text--semibold"
+          >
+            Article
+          </a>
+
+          <div class="dropdown">
+            <button
+              class="nav__link label-style-text label-style-text--semibold"
+            >
+              Property
+              <svg class="dropdown__icon">
+                <use href="assets/icons.svg#arrow"></use>
+              </svg>
+            </button>
+            <div class="dropdown__content">
+              <ul
+                class="dropdown__list label-style-text label-style-text--semibold"
+              >
+                <li><a href="#" class="dropdown__list-item">HTML</a></li>
+                <li><a href="#" class="dropdown__list-item">CSS</a></li>
+                <li>
+                  <a href="#" class="dropdown__list-item">JavaScript</a>
+                </li>
+                <li><a href="#" class="dropdown__list-item">React</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <button
+            class="btn btn-primary btn--outline label-style-text label-style-text--semibold"
+          >
+            Sign Up
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero-section section">
+      <img
+        src="/assets/blur-1.svg"
+        alt="green blur background"
+        class="blur-bg--1"
+      />
+      <div class="hero-left-side">
+        <h1 class="hero-left-side__heading heading-1">
+          find the place to live
+          <span class="hero-left-side__colored-text">your dreams</span> easily
+          here
+        </h1>
+
+        <p class="hero-left-side__p body-style-text">
+          Everything you need about finding your place to live will be here,
+          where it will be easier for you
+        </p>
+
+        <div class="search input">
+          <svg class="search__icon">
+            <use href="assets//icons.svg#location"></use>
+          </svg>
+          <input
+            type="text"
+            placeholder="Search for the location you want!"
+            class="search__box search label-style-text label-style-text--medium"
+          />
+          <button
+            class="btn btn-primary-icon label-style-text label-style-text--semibold"
+          >
+            Search
+            <svg class="btn-icon--arrow">
+              <use href="assets/icons.svg#arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="hero-left-side__partnership">
+          <p class="hero-left-side__p body-style-text">Our Partnership</p>
+          <div class="hero-left-side__partnership-image-container">
+            <img
+              src="/assets//images/traveloka.webp"
+              alt="traveloka logo"
+              class="hero-left-side__partnership-image"
+            />
+            <img
+              src="/assets//images/ticket-com.webp"
+              alt="ticket.com logo"
+              class="hero-left-side__partnership-image"
+            />
+            <img
+              src="/assets//images/airbnb.webp"
+              alt="airbnb logo"
+              class="hero-left-side__partnership-image"
+            />
+            <img
+              src="/assets//images/tripadvisor.webp"
+              alt="tripadvisor logo"
+              class="hero-left-side__partnership-image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="hero-section__image-container">
+        <img
+          src="/assets//images/hero-right-side.webp"
+          alt="White House"
+          class="hero-section__image"
+        />
+        <div class="hero-section__recommended-wrapper">
+          <div class="hero-section__recommended">
+            <div class="recommended-card">
+              <div class="recommended-card__images-container">
+                <img
+                  src="assets/images/avatar-20.webp"
+                  alt="Person Avatar picture"
+                  class="recommended-card__image"
+                />
+                <img
+                  src="assets/images/avatar-17.webp"
+                  alt="Person Avatar picture"
+                  class="recommended-card__image"
+                />
+                <img
+                  src="assets/images/avatar-6.webp"
+                  alt="Person Avatar picture"
+                  class="recommended-card__image"
+                />
+              </div>
+              <div class="recommended-card__text-container">
+                <p
+                  class="recommended-card__text-container__heading body-style-text--semibold body-style-text"
+                >
+                  1K+ People
+                </p>
+                <p
+                  class="recommended-card__text-container__subheading label-style-text label-style-text--small"
+                >
+                  Successfully Getting Home
+                </p>
+              </div>
+            </div>
+            <div class="recommended-card">
+              <div class="recommended-card__images-container">
+                <img
+                  src="assets/images/recommned-house.webp"
+                  alt="Person Avatar picture"
+                  class="recommended-card__image recommended-card__image recommended-card__image--house"
+                />
+              </div>
+              <div class="recommended-card__text-container">
+                <p
+                  class="recommended-card__text-container__heading body-style-text--semibold body-style-text"
+                >
+                  56 Houses
+                </p>
+                <p
+                  class="recommended-card__text-container__subheading label-style-text label-style-text--small"
+                >
+                  Sold Monthly
+                </p>
+              </div>
+            </div>
+            <div class="recommended-card">
+              <div class="recommended-card__images-container">
+                <img
+                  src="assets/images/avatar-10.webp"
+                  alt="Person Avatar picture"
+                  class="recommended-card__image recommended-card__image"
+                />
+              </div>
+              <div class="recommended-card__text-container">
+                <p
+                  class="recommended-card__text-container__heading body-style-text--semibold body-style-text"
+                >
+                  4K+
+                </p>
+                <p
+                  class="recommended-card__text-container__subheading label-style-text label-style-text--small"
+                >
+                  People looking for New Houses
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- </div> -->
   </body>
 </html>

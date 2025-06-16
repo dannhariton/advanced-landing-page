@@ -27,7 +27,6 @@
   &-primary-icon {
     padding: 1.2rem 2.4rem;
     border: 1px solid $color-primary;
-
     gap: 0.8rem;
   }
 
@@ -66,7 +65,7 @@
 
 .nav__link {
   color: $color-white;
-  background-color: transparent;
+  background-color: rgba($color-white, 0.1);
   border: 1px solid $color-white;
   border-radius: 10rem;
   height: 3.4rem;
@@ -76,10 +75,15 @@
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color-white, 0.2);
+  }
 }
 
 .dropdown {
-  position: absolute;
+  position: relative;
   z-index: 100;
   display: inline-block;
 
@@ -121,11 +125,13 @@
     }
   }
 
-  &:focus-within {
+  &:focus-within,
+  &:hover {
     outline: none;
 
     .dropdown__content {
       display: block;
+      background-color: rgba($color-white, 0.2);
     }
 
     .dropdown__icon {
@@ -168,17 +174,15 @@
 }
 
 .input {
-  height: 5.6rem;
   background-color: $color-white;
   border-radius: 10rem;
   padding: 0.4rem;
-  padding-left: 2.4rem;
-  gap: 1.6rem;
-  border: 1px solid $color-gray-1;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border: 1px solid $color-gray-1;
 
   input::placeholder {
     color: $color-gray-2;
@@ -191,16 +195,20 @@
 
 .search {
   &__icon {
+    margin-left: 2rem;
     height: 2.4rem;
     width: 2.4rem;
     color: $color-secondary;
+    flex-shrink: 0;
   }
 
   &__box {
+    width: 80%;
+    margin: 0 1.6rem;
     background-color: transparent;
     border: none;
     line-height: 2.2rem;
-    min-width: 24rem;
+    text-overflow: ellipsis;
 
     &:focus {
       outline: none;
@@ -229,5 +237,47 @@
 
   &__box:invalid:focus ~ &__error {
     visibility: visible;
+  }
+}
+
+.recommended-card {
+  display: flex;
+  align-items: center;
+  border-radius: 3.2rem;
+  padding: 2.4rem;
+  box-shadow: 0 1.1rem 2.8rem rgba(51, 51, 51, 0.6);
+  background-color: $color-white;
+
+  &__images-container {
+    padding-right: 1.6rem;
+    display: flex;
+  }
+
+  &__image {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 100%;
+    border: 3px solid $color-white;
+    box-shadow: 0 0.9rem 3.2rem #595cdb1a;
+
+    &:not(:first-child) {
+      margin-left: -3rem;
+    }
+
+    &--house {
+      border-radius: 2.4rem;
+    }
+  }
+
+  &__text-container {
+    width: max-content;
+
+    &__heading {
+      color: $color-black;
+    }
+
+    &__subheading {
+      color: #68799f;
+    }
   }
 }

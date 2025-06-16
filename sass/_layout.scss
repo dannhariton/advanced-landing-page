@@ -1,0 +1,31 @@
+@use "../sass/base" as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  max-width: 119.2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 0 3rem;
+}
+
+.navigation {
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  &__logo {
+    width: 11.5rem;
+  }
+}
