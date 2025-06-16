@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/kit.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>UI Kit</title>
   </head>
   <body>
@@ -16,5 +22,175 @@
     <svg class="play-icon">
       <use href="img/play.svg#Play"></use>
     </svg> -->
+    <span class="heading-1">Heading 1</span>
+    <span class="heading-2">Heading 2</span>
+    <span class="heading-3">Heading 3</span>
+    <span class="heading-4">Heading 4</span>
+
+    <span class="subtitle">subtitle</span>
+
+    <span class="body-style-text">body-style-text</span>
+    <span class="body-style-text body-style-text--medium"
+      >body-style-text--medium</span
+    >
+    <span class="body-style-text body-style-text--semibold"
+      >body-style-text--semibold</span
+    >
+
+    <span class="label-style-text">label-text</span>
+    <span class="label-style-text label-style-text--small"
+      >label-text--small</span
+    >
+    <span class="label-style-text label-style-text--medium"
+      >label-text--medium</span
+    >
+    <span class="label-style-text label-style-text--semibold"
+      >body-style-text--semibold</span
+    >
+
+    <!-- BUTTONS-->
+    <!--No icon-->
+    <button class="btn btn-primary label-style-text label-style-text--semibold">
+      More Articles
+    </button>
+    <button
+      class="btn btn-primary btn--outline label-style-text label-style-text--semibold"
+    >
+      More Articles
+    </button>
+
+    <!--Icon only-->
+    <button class="btn btn-icon">
+      <svg class="btn-icon--arrow">
+        <use href="img/icons.svg#arrow"></use>
+      </svg>
+    </button>
+    <button class="btn btn-icon btn--outline">
+      <svg class="btn-icon--arrow">
+        <use href="img/icons.svg#arrow"></use>
+      </svg>
+    </button>
+
+    <!--Icon Left Side/ Right Side Class-->
+    <button
+      class="btn btn-primary-icon btn--left label-style-text label-style-text--semibold"
+    >
+      More Articles
+      <svg class="btn-icon--arrow">
+        <use href="img/icons.svg#arrow"></use>
+      </svg>
+    </button>
+    <button
+      class="btn btn-primary-icon btn--outline label-style-text label-style-text--semibold"
+    >
+      More Articles
+      <svg class="btn-icon--arrow">
+        <use href="img/icons.svg#arrow"></use>
+      </svg>
+    </button>
+
+    <!--Active Class-->
+    <button
+      class="btn btn-primary-icon btn--left btn--active label-style-text label-style-text--semibold"
+    >
+      More Articles
+      <svg class="btn-icon--arrow">
+        <use href="img/icons.svg#arrow"></use>
+      </svg>
+    </button>
+    <button
+      class="btn btn-primary-icon btn--active label-style-text label-style-text--semibold"
+    >
+      More Articles
+      <svg class="btn-icon--arrow">
+        <use href="img/icons.svg#arrow"></use>
+      </svg>
+    </button>
+
+    <!--Navigation Buttons Class-->
+    <a href="#" class="nav__link label-style-text label-style-text--semibold">
+      More Articles
+    </a>
+
+    <div class="dropdown">
+      <button class="nav__link label-style-text label-style-text--semibold">
+        More Articles
+        <svg class="dropdown__icon">
+          <use href="img/icons.svg#arrow"></use>
+        </svg>
+      </button>
+      <div class="dropdown__content">
+        <ul class="dropdown__list label-style-text label-style-text--semibold">
+          <li><a href="#" class="dropdown__list-item">HTML</a></li>
+          <li><a href="#" class="dropdown__list-item">CSS</a></li>
+          <li>
+            <a href="#" class="dropdown__list-item">JavaScript</a>
+          </li>
+          <li><a href="#" class="dropdown__list-item">React</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Labels -->
+    <div class="label label--popular label-style-text label-style-text--medium">
+      <svg class="label__icon">
+        <use href="img/icons.svg#fire"></use></svg
+      >Popular
+    </div>
+    <div
+      class="label label--new-house label-style-text label-style-text--medium"
+    >
+      <svg class="label__icon">
+        <use href="img/icons.svg#house"></use></svg
+      >New House
+    </div>
+    <div
+      class="label label--best-deals label-style-text label-style-text--medium"
+    >
+      Best Deals
+    </div>
+
+    <!-- Inputs -->
+
+    <div class="search input">
+      <svg class="search__icon">
+        <use href="img/icons.svg#location"></use>
+      </svg>
+      <input
+        type="text"
+        placeholder="Search for the location you want!"
+        class="search__box label-style-text label-style-text--medium"
+      />
+      <button
+        class="btn btn-primary-icon label-style-text label-style-text--semibold"
+      >
+        Search
+        <svg class="btn-icon--arrow">
+          <use href="img/icons.svg#arrow"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="email">
+      <input
+        type="email"
+        placeholder="Your email here"
+        class="input email__box"
+        required
+      />
+      <span class="email__error label-style-text label-style-text--small"
+        >Field error. Please fix it</span
+      >
+    </div>
+
+    <!-- <div class="select input">
+      <select>
+        <option>Select</option>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JS</option>
+        <option>React</option>
+      </select>
+    </div> -->
   </body>
 </html>

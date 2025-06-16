@@ -1,3 +1,3 @@
-body {
-  background-color: white;
-}
+@forward "../sass/base";
+@forward "../sass/components";
+@forward "../sass/typography";
