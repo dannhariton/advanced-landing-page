@@ -363,3 +363,92 @@
     }
   }
 }
+
+.review {
+  width: 78.4rem;
+  max-height: 42.9rem;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__house-image {
+    width: 100%;
+    border-radius: 0.8rem;
+    object-fit: cover;
+  }
+
+  &__information {
+    bottom: -20%;
+    position: absolute;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 61.2rem;
+    padding: 3.2rem;
+    gap: 2.4rem;
+    border-radius: 1.6rem;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    &-heading {
+      color: $color-black;
+    }
+
+    &-text {
+      color: $color-gray-3;
+    }
+  }
+
+  &__user-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    &-photo {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      margin-right: 1.6rem;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    &-name {
+      color: $color-black;
+    }
+
+    &-job {
+      color: $color-gray-2;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      color: $color-secondary;
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 1.6rem;
+    }
+
+    &-number {
+      color: $color-black;
+    }
+  }
+}
