@@ -191,6 +191,20 @@
   }
 }
 
+.section-label-top {
+  color: $color-secondary;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 3.2rem;
+    height: 1px;
+    background-color: $color-secondary;
+
+    transform: translate(3.2rem, -0.7rem);
+  }
+}
+
 .input {
   background-color: $color-white;
   border-radius: 10rem;
@@ -307,10 +321,11 @@
   flex-direction: column;
   gap: 2.4rem;
   padding-right: 3.2rem;
+  width: 39rem;
 
   &__image {
-    width: 37.6rem;
     height: 38.2rem;
+    object-fit: cover;
     border-radius: 2.4rem;
   }
 
@@ -367,6 +382,7 @@
 .review {
   width: 78.4rem;
   max-height: 42.9rem;
+  margin-right: 3.2rem;
 
   position: relative;
   display: flex;
@@ -389,6 +405,8 @@
     padding: 3.2rem;
     gap: 2.4rem;
     border-radius: 1.6rem;
+
+    box-shadow: 0 0 32px 0 rgba(#0c153717, 0.09);
   }
 
   &__title {
