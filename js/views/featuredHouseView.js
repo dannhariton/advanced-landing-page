@@ -139,4 +139,8 @@ export default class FeaturedHouseView extends View {
       });
     });
   }
+
+  addHandlerRender(handler) {
+    handler();
+  }
 }
