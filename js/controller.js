@@ -23,6 +23,8 @@ const controlHouseCards = async function (type) {
 const controlReviews = async function () {
   let data = await model.handleReviews();
   reviewsView.render(data);
+  reviewsView.createDots();
+  reviewsView.addDotsHandler();
 };
 
 const init = async function () {

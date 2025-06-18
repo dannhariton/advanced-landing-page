@@ -2,6 +2,7 @@ import View from "../views/View.js";
 
 export default class ReviewsView extends View {
   _parentElement = document.querySelector(".reviews__container");
+  _pagination_container = document.querySelector(".reviews__pagination");
 
   render(data) {
     const markup = this._generateMarkup(data);
@@ -11,9 +12,16 @@ export default class ReviewsView extends View {
   _generateMarkup(data) {
     let markup = ``;
 
-    data.forEach((review) => {
+    data.forEach((review, i) => {
       markup += `
-    <div class="review">
+    <div class="review" data-review="${i}">
+      <div class="review__house-image-container">
+      <img
+          src="${review.houseImageURL}"
+          alt="house image"
+          class="review__house-image"
+        />
+      </div>
       <div class="review__information">
         <div class="review__title">
           <h4 class="heading-4 review__title-heading">
@@ -51,11 +59,6 @@ export default class ReviewsView extends View {
           </div>
         </div>
       </div>
-      <img
-        src="${review.houseImageURL}"
-        alt="house image"
-        class="review__house-image"
-      />
     </div>`;
     });
 
@@ -64,5 +67,82 @@ export default class ReviewsView extends View {
 
   addHandlerRender(handler) {
     handler();
+  }
+
+  createDots() {
+    const reviews = [...this._parentElement.children];
+
+    reviews.forEach((_, i) => {
+      this._pagination_container.insertAdjacentHTML(
+        "beforeend",
+        `<button class="reviews__pagination__dot" data-slide="${i}"></button>`
+      );
+    });
+  }
+
+  scrollIntoReview(card) {
+    card.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  }
+
+  changeDotsState(currentSlide) {
+    const dots = [...document.querySelectorAll(".reviews__pagination__dot")];
+    dots.forEach((dot) =>
+      dot.classList.remove("reviews__pagination__dot__active")
+    );
+
+    const activeDot = document.querySelector(
+      `.reviews__pagination__dot[data-slide="${currentSlide}"]`
+    );
+    activeDot.classList.add("reviews__pagination__dot__active");
+  }
+
+  addDotsHandler() {
+    let currentSlide = 1;
+    this.changeDotsState(currentSlide);
+
+    let targetCard = document.querySelector(
+      `.review[data-review="${currentSlide}"]`
+    );
+
+    setTimeout(() => {
+      this._observerCards();
+    }, 1000);
+
+    this.scrollIntoReview(targetCard);
+
+    this._pagination_container.addEventListener("click", (e) => {
+      if (e.target.classList.contains("reviews__pagination__dot")) {
+        currentSlide = e.target.dataset.slide;
+        targetCard = document.querySelector(
+          `.review[data-review="${currentSlide}"]`
+        );
+        this.changeDotsState(currentSlide);
+      }
+
+      this.scrollIntoReview(targetCard);
+    });
+  }
+
+  _observerCards() {
+    const cards = [...document.querySelectorAll(".review")];
+
+    const options = {
+      root: this._review_container,
+      rootMargin: "0px",
+      threshold: 1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.changeDotsState(entry.target.dataset.review);
+        }
+      });
+    }, options);
+
+    cards.forEach((card) => observer.observe(card));
   }
 }
