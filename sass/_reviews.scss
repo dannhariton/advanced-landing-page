@@ -1,0 +1,42 @@
+@use "base" as *;
+
+.reviews {
+  min-height: 68.2rem;
+
+  &__headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 4rem;
+
+    &__heading {
+      color: $color-black;
+    }
+  }
+
+  &__container-wrapper {
+    display: flex;
+    min-height: 54rem;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  &__container {
+    display: flex;
+
+    &:first-child {
+      margin-left: calc(50vw - 39.2rem);
+    }
+
+    &:last-child {
+      margin-right: calc(50vw - 39.2rem);
+    }
+  }
+}
+
+.review {
+  scroll-snap-align: center;
+}
