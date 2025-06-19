@@ -19,9 +19,13 @@
     padding: 1.2rem 2.4rem;
   }
 
-  &-icon--arrow {
+  &__icon {
     height: 2.4rem;
     width: 2.4rem;
+
+    &--inverted {
+      transform: rotate(180deg);
+    }
   }
 
   &-primary-icon {
@@ -173,6 +177,34 @@
   }
 }
 
+.section-label {
+  color: $color-secondary;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 3.2rem;
+    height: 1px;
+    background-color: $color-secondary;
+
+    transform: translate(-4rem, 0.8rem);
+  }
+}
+
+.section-label-top {
+  color: $color-secondary;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 3.2rem;
+    height: 1px;
+    background-color: $color-secondary;
+
+    transform: translate(3.2rem, -0.7rem);
+  }
+}
+
 .input {
   background-color: $color-white;
   border-radius: 10rem;
@@ -216,29 +248,30 @@
   }
 }
 
-.email {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  position: relative;
+// .email {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: start;
+//   position: relative;
 
-  &__error {
-    color: $color-danger;
-    padding-left: 2.8rem;
-    padding-top: 0.8rem;
-    position: absolute;
-    visibility: hidden;
-    transform: translateY(5rem);
-  }
+//   &__error {
+//     color: $color-danger;
+//     padding-left: 2.8rem;
+//     padding-top: 0.8rem;
+//     position: absolute;
+//     z-index: 11;
+//     visibility: hidden;
+//     transform: translateY(3rem);
+//   }
 
-  &__box:invalid:focus {
-    border: 1px solid $color-danger;
-  }
+//   &-box:invalid:focus {
+//     border: 1px solid $color-danger;
+//   }
 
-  &__box:invalid:focus ~ &__error {
-    visibility: visible;
-  }
-}
+//   &-box:invalid:focus ~ &__error {
+//     visibility: visible;
+//   }
+// }
 
 .recommended-card {
   display: flex;
@@ -278,6 +311,185 @@
 
     &__subheading {
       color: #68799f;
+    }
+  }
+}
+
+.house-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding-right: 3.2rem;
+  width: 39rem;
+
+  &__image {
+    height: 38.2rem;
+    object-fit: cover;
+    border-radius: 2.4rem;
+  }
+
+  &__label {
+    position: absolute;
+    z-index: 10;
+    top: 33.2rem;
+    left: 1.6rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    &-title {
+      color: $color-black;
+    }
+
+    &-price {
+      color: $color-gray-3;
+      font-weight: 500;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    &-image {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+    }
+
+    &-information {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    &-name {
+      color: $color-black;
+      line-height: 2.4rem;
+    }
+
+    &-location {
+      color: $color-gray-2;
+    }
+  }
+}
+
+.review {
+  width: 78.4rem;
+  min-height: 50.5rem;
+  margin-right: 3.2rem;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__house-image-container {
+    width: 100%;
+    height: 42.9rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.8rem;
+  }
+
+  &__house-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+
+  &__information {
+    align-self: flex-end;
+    z-index: 12;
+    position: absolute;
+    background-color: $color-white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 61.2rem;
+    padding: 3.2rem;
+    gap: 2.4rem;
+    border-radius: 1.6rem;
+
+    box-shadow: 0 0 32px 0 rgba(#0c153717, 0.09);
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    &-heading {
+      color: $color-black;
+    }
+
+    &-text {
+      color: $color-gray-3;
+    }
+  }
+
+  &__user-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    &-photo {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      margin-right: 1.6rem;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    &-name {
+      color: $color-black;
+    }
+
+    &-job {
+      color: $color-gray-2;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      color: $color-secondary;
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 1.6rem;
+    }
+
+    &-number {
+      color: $color-black;
+    }
+  }
+
+  &:hover {
+    .review__house-image {
+      transform: scale(1.1);
     }
   }
 }

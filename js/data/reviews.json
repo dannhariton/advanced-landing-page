@@ -1,0 +1,37 @@
+[
+  {
+    "houseImageURL": "assets/images/reviews/house-1.webp",
+    "title": "Best! I got the house I wanted through Hounter",
+    "description": "Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.",
+    "userInformation": {
+      "name": "Jenny Wilson",
+      "job": "Product Owner",
+      "userImageURL": "assets/images/avatars/avatar-9.webp"
+    },
+    "rating": "4.5"
+  },
+
+  {
+    "houseImageURL": "assets/images/reviews/house-2.webp",
+    "title": "My house sold out fast!",
+    "description": "I was finally able to sell my house quickly through Hounter by immediately setting me up with people who wanted my house. I also do not get a discount from the sale of my house. Awesome!",
+    "userInformation": {
+      "name": "Dianne Russell",
+      "job": "Product Owner",
+      "userImageURL": "assets/images/avatars/avatar-17.webp"
+    },
+    "rating": "4.3"
+  },
+
+  {
+    "houseImageURL": "assets/images/reviews/house-3.webp",
+    "title": "Through the Hounter, I can get a house for my self",
+    "description": "By looking for information about what kind of house we want, we managed to get the house we wanted very quickly, and directly connected with the seller to be able to ask about the details, very helpful!",
+    "userInformation": {
+      "name": "Ronald Richards",
+      "job": "Head of Marketing",
+      "userImageURL": "assets/images/avatars/avatar-3.webp"
+    },
+    "rating": "4.6"
+  }
+]
