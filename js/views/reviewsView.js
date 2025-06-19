@@ -89,29 +89,23 @@ export default class ReviewsView extends View {
 
   changeDotsState(currentSlide) {
     const dots = [...document.querySelectorAll(".reviews__pagination__dot")];
-    dots.forEach((dot) =>
-      dot.classList.remove("reviews__pagination__dot__active")
-    );
-
     const activeDot = document.querySelector(
       `.reviews__pagination__dot[data-slide="${currentSlide}"]`
     );
+
+    dots.forEach((d) => d.classList.remove("reviews__pagination__dot__active"));
     activeDot.classList.add("reviews__pagination__dot__active");
   }
 
   addDotsHandler() {
     let currentSlide = 1;
-    this.changeDotsState(currentSlide);
-
     let targetCard = document.querySelector(
       `.review[data-review="${currentSlide}"]`
     );
 
-    setTimeout(() => {
-      this._observerCards();
-    }, 1000);
+    this._observerCards();
 
-    this.scrollIntoReview(targetCard);
+    document.querySelector(".reviews__container-wrapper").scrollLeft = 410;
 
     this._pagination_container.addEventListener("click", (e) => {
       if (e.target.classList.contains("reviews__pagination__dot")) {
@@ -119,9 +113,7 @@ export default class ReviewsView extends View {
         targetCard = document.querySelector(
           `.review[data-review="${currentSlide}"]`
         );
-        this.changeDotsState(currentSlide);
       }
-
       this.scrollIntoReview(targetCard);
     });
   }
