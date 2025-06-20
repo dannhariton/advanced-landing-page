@@ -80,13 +80,6 @@ export default class ReviewsView extends View {
     });
   }
 
-  scrollIntoReview(card) {
-    card.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
-  }
-
   changeDotsState(currentSlide) {
     const dots = [...document.querySelectorAll(".reviews__pagination__dot")];
     const activeDot = document.querySelector(
@@ -97,44 +90,76 @@ export default class ReviewsView extends View {
     activeDot.classList.add("reviews__pagination__dot__active");
   }
 
-  addDotsHandler() {
-    let currentSlide = 1;
-    let targetCard = document.querySelector(
-      `.review[data-review="${currentSlide}"]`
-    );
+  scrollToActive(card, container) {
+    const cardWidth = card.offsetWidth;
+    const containerWidth = container.offsetWidth;
+    const scrollLeft = card.offsetLeft - containerWidth / 2 + cardWidth / 2;
+    container.scrollLeft = scrollLeft;
+  }
 
-    this._observerCards();
+  checkActiveDot() {
+    const container = document.querySelector(".reviews__container-wrapper");
+    let scrollTimeout;
+    let activeCard;
 
-    document.querySelector(".reviews__container-wrapper").scrollLeft = 410;
+    const cards = [...document.querySelectorAll(".review")];
 
-    this._pagination_container.addEventListener("click", (e) => {
-      if (e.target.classList.contains("reviews__pagination__dot")) {
-        currentSlide = e.target.dataset.slide;
-        targetCard = document.querySelector(
-          `.review[data-review="${currentSlide}"]`
-        );
-      }
-      this.scrollIntoReview(targetCard);
+    container.addEventListener("scroll", () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        for (let card = 0; card < cards.length; card++) {
+          const element = cards[card];
+          if (this.isElementCentered(element)) {
+            element.classList.add("card-active");
+            activeCard = element;
+          } else {
+            element.classList.remove("card-active");
+          }
+        }
+        this.changeDotsState(activeCard.dataset.review);
+      }, 100);
     });
   }
 
-  _observerCards() {
-    const cards = [...document.querySelectorAll(".review")];
+  addDotsHandler() {
+    let currentElement = 1;
+    let targetCard = document.querySelector(
+      `.review[data-review="${currentElement}"]`
+    );
+    const container = document.querySelector(".reviews__container-wrapper");
+    targetCard.classList.add("card-active");
 
-    const options = {
-      root: this._review_container,
-      rootMargin: "0px",
-      threshold: 1,
-    };
+    if (!this.isElementCentered(targetCard)) {
+      this.scrollToActive(targetCard, container);
+      this.changeDotsState(currentElement);
+    }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          this.changeDotsState(entry.target.dataset.review);
-        }
-      });
-    }, options);
+    this._pagination_container.addEventListener("click", (e) => {
+      if (e.target.classList.contains("reviews__pagination__dot")) {
+        currentElement = e.target.dataset.slide;
+        targetCard.classList.remove("card-active");
+        targetCard = document.querySelector(
+          `.review[data-review="${currentElement}"]`
+        );
+        targetCard.classList.add("card-active");
 
-    cards.forEach((card) => observer.observe(card));
+        this.scrollToActive(targetCard, container);
+      }
+      this.changeDotsState(targetCard.dataset.review);
+    });
+  }
+
+  isElementCentered(element) {
+    const elementRect = element.getBoundingClientRect();
+    const viewportWidth =
+      window.innerWidth || document.documentElement.clientWidth;
+
+    const elementCenterX = elementRect.left + elementRect.width / 2;
+    const viewportCenterX = viewportWidth / 2;
+
+    const distanceToCenter = Math.abs(viewportCenterX - elementCenterX);
+    const tolerance = 30;
+
+    return distanceToCenter <= tolerance;
   }
 }

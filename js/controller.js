@@ -25,6 +25,7 @@ const controlReviews = async function () {
   reviewsView.render(data);
   reviewsView.createDots();
   reviewsView.addDotsHandler();
+  reviewsView.checkActiveDot();
 };
 
 const init = async function () {
