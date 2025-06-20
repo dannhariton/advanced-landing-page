@@ -1,6 +1,7 @@
 @use "base" as *;
 
 .featured-house {
+  overflow-x: hidden;
   min-height: 66.5rem;
 
   &__top {
@@ -25,7 +26,9 @@
   }
 
   &__cards {
+    max-width: 119.2rem;
     position: relative;
-    margin-top: 3.6rem;
+    margin: 3.6rem auto;
+    padding: 0 3rem;
   }
 }
