@@ -1,8 +1,86 @@
+@use "base" as *;
+
 .form {
+  min-height: 59.2rem;
   display: flex;
+  justify-content: space-between;
+
   &__left {
+    margin-right: 3.2rem;
+    width: 47.8rem;
+    border-radius: 0.8rem;
+    padding: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.8rem;
+
+    box-shadow: 0 0.8rem 3.2rem rgba($color-black, 0.09);
+
+    &__text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+
+    &__text {
+      text-align: center;
+      color: $color-gray-3;
+    }
+
+    &__break {
+      align-self: center;
+      width: 4rem;
+      height: 0.2rem;
+      border-radius: 0.4rem;
+
+      border: 1px solid $color-primary;
+    }
+
+    &__logo-container {
+      position: relative;
+      height: 20.6rem;
+      width: 26.1rem;
+    }
+
+    &__logo {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__right {
+    width: 68.2rem;
+    height: 59.2rem;
+    border-radius: 0.8rem;
+    padding: 4rem;
+
+    box-shadow: 0 0.8rem 3.2rem rgba($color-black, 0.09);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-input-text {
+      width: 49.6rem;
+      padding: 1.6rem 2.4rem;
+    }
+  }
+
+  &__label {
+    color: $color-black;
+    width: 8.9rem;
   }
 }
