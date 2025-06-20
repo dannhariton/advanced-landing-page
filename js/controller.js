@@ -4,14 +4,14 @@ import FeaturedHouseView from "./views/featuredHouseView.js";
 const featuredHouseView = new FeaturedHouseView();
 
 const controlHouseCards = async function (type) {
-  let data = await model.handleHouseData();
+  let data = await model.fetchHouseData();
 
   if (type === "villa") {
-    data = await model.handleVillaData();
+    data = await model.fetchVillaData();
   }
 
   if (type === "apartment") {
-    data = await model.handleApartmentData();
+    data = await model.fetchApartmentData();
   }
 
   featuredHouseView.render(data);
