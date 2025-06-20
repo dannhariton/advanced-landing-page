@@ -509,8 +509,9 @@
             <label
               class="label-style-text label-style-text--medium form__label"
               for="surname"
-              >Surname</label
             >
+              Surname
+            </label>
             <input
               class="form__row-input-text input"
               type="text"
@@ -535,12 +536,17 @@
 
           <div class="form__row">
             <label
-              class="label-style-text label-style-text--medium form__label"
-              for="surname"
-              >Message</label
+              class="label-style-text label-style-text--medium form__label form__label-textarea"
+              for="form-textarea"
             >
-
-            <input type="text" value="" class="" />
+              Message
+            </label>
+            <textarea
+              id="form-textarea"
+              class="input form__row-text-area"
+              maxlength="500"
+              placeholder="Message"
+            ></textarea>
           </div>
         </form>
         <div class="form__row">

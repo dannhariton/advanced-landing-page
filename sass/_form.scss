@@ -77,10 +77,25 @@
       width: 49.6rem;
       padding: 1.6rem 2.4rem;
     }
+
+    &-text-area {
+      justify-self: flex-start;
+      resize: none;
+      border-radius: 2.8rem;
+      overflow: scroll;
+      width: 49.6rem;
+      height: 14.4rem;
+      padding: 1.6rem 2.4rem;
+    }
   }
 
   &__label {
     color: $color-black;
     width: 8.9rem;
+
+    &-textarea {
+      align-self: flex-start;
+      padding-top: 1.5rem;
+    }
   }
 }
