@@ -1,3 +1,5 @@
+export const cache = {};
+
 export async function fetchHouseData() {
   const response = await fetch("./js/data/house.json");
   const json = await response.json();
