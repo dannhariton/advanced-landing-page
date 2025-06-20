@@ -27,7 +27,6 @@ const controlHouseCards = async function (type = "house") {
   }
 
   model.cache[cacheKey] = data;
-  console.log(model.cache);
 
   featuredHouseView.render(data);
   featuredHouseView.sliderButtons();
