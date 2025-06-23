@@ -73,19 +73,39 @@
     align-items: center;
     justify-content: space-between;
 
+    position: relative;
+
     &-input-text {
       width: 49.6rem;
       padding: 1.6rem 2.4rem;
+
+      &::placeholder {
+        color: $color-gray-2;
+      }
     }
 
     &-text-area {
       justify-self: flex-start;
       resize: none;
       border-radius: 2.8rem;
-      overflow: scroll;
+      overflow: auto;
       width: 49.6rem;
       height: 14.4rem;
       padding: 1.6rem 2.4rem;
+      scrollbar-width: none;
+
+      &::placeholder {
+        color: $color-gray-2;
+      }
+
+      &-counter {
+        position: absolute;
+        top: 86%;
+        right: 2%;
+        transform: translate(-50%, -50%);
+
+        color: $color-gray-2;
+      }
     }
   }
 

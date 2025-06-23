@@ -528,6 +528,7 @@
               >Education</label
             >
             <select id="education" name="education">
+              <option value="select">Select</option>
               <option value="highschool">Highschool</option>
               <option value="university">University</option>
               <option value="master">Master</option>
@@ -547,6 +548,9 @@
               maxlength="500"
               placeholder="Message"
             ></textarea>
+            <div class="form__row-text-area-counter">
+              <span id="currentCount">0</span> / <span id="maxLength">500</span>
+            </div>
           </div>
         </form>
         <div class="form__row">
