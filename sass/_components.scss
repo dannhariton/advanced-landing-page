@@ -193,15 +193,19 @@
 
 .section-label-top {
   color: $color-secondary;
+  position: relative;
 
   &::before {
+    position: absolute;
     content: "";
     display: block;
     width: 3.2rem;
     height: 1px;
+    top: -30%;
+    left: 50%;
     background-color: $color-secondary;
 
-    transform: translate(3.2rem, -0.7rem);
+    transform: translate(-50%, 0);
   }
 }
 
@@ -491,5 +495,58 @@
     .review__house-image {
       transform: scale(1.1);
     }
+  }
+}
+
+.article {
+  width: 58rem;
+  display: flex;
+  align-items: center;
+
+  &__image {
+    width: 20rem;
+    height: 14.8rem;
+    border-radius: 1.8rem;
+    object-fit: cover;
+    margin-right: 3.2rem;
+  }
+
+  &__right-side {
+    padding: 0.8rem 0;
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: row;
+    height: 3.2rem;
+    align-items: center;
+    padding-bottom: 1.6rem;
+
+    &-image {
+      margin-right: 1.6rem;
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 100%;
+    }
+
+    &-name {
+      color: #3c4563;
+    }
+  }
+
+  &__title {
+    color: #1b1c57;
+    padding-bottom: 1.6rem;
+  }
+
+  &__information {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 }

@@ -1,0 +1,21 @@
+@use "base" as *;
+
+.find-more {
+  min-height: 73.9rem;
+  display: flex;
+  justify-content: center;
+
+  &__headline {
+    width: 50%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__heading {
+      color: $color-black;
+      text-align: center;
+    }
+  }
+}
