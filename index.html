@@ -527,12 +527,59 @@
               for="education"
               >Education</label
             >
-            <select id="education" name="education">
-              <option value="select">Select</option>
-              <option value="highschool">Highschool</option>
-              <option value="university">University</option>
-              <option value="master">Master</option>
-            </select>
+
+            <div
+              class="select-box input label-style-text label-style-text--medium"
+            >
+              <div class="select-box__options-container">
+                <div class="select-box__option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="Highschool"
+                    name="category"
+                  />
+                  <label for="sports">Highschool</label>
+                </div>
+
+                <div class="select-box__option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="React"
+                    name="category"
+                  />
+                  <label for="sports">React</label>
+                </div>
+
+                <div class="select-box__option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="university"
+                    name="category"
+                  />
+                  <label for="news">University</label>
+                </div>
+
+                <div class="select-box__option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="Masters"
+                    name="category"
+                  />
+                  <label for="tutorials">Master</label>
+                </div>
+              </div>
+
+              <div class="selected">
+                <p class="selected__text">Select</p>
+                <svg class="selected__icon">
+                  <use href="assets/icons.svg#arrow"></use>
+                </svg>
+              </div>
+            </div>
           </div>
 
           <div class="form__row">
@@ -553,12 +600,27 @@
             </div>
           </div>
         </form>
-        <div class="form__row">
-          <input type="checkbox" value="" class="" />
+        <div class="form__row form__checkbox">
+          <input id="checkbox" type="checkbox" class="checkbox" />
+          <label for="checkbox" class="checkbox__text label-style-text">
+            <span class="custom-checkbox-icon">
+              <svg class="checkbox-icon" width="24" height="24">
+                <use href="/assets/icons.svg#check"></use>
+              </svg>
+            </span>
+            I give consent to the processing of my personal data given in the
+            contact form above under the terms and conditions of Grid Dynamics
+            Privacy Policy.
+          </label>
         </div>
 
         <div class="form__row">
-          <input type="submit" value="Join Now" class="btn btn-primary" />
+          <input
+            id="submit"
+            type="submit"
+            value="Join Now"
+            class="btn btn-primary form__submit"
+          />
         </div>
       </div>
     </section>

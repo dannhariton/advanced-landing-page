@@ -33,10 +33,15 @@ const controlTextarea = async function () {
   formView.updateCharCount();
 };
 
+const controlSelect = async function () {
+  formView.selectOption();
+};
+
 const init = async function () {
   featuredHouseView.addHandlerRender(controlHouseCards);
   featuredHouseView.filterButtons(controlHouseCards);
   reviewsView.addHandlerRender(controlReviews);
   formView.checkTextLimit(controlTextarea);
+  controlSelect();
 };
 init();
