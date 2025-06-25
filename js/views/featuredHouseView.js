@@ -2,6 +2,10 @@ import View from "../views/View.js";
 
 export default class FeaturedHouseView extends View {
   _parentElement = document.querySelector(".featured-house__cards");
+  _nextBtn = document.querySelector(".btn--next");
+  _prevBtn = document.querySelector(".btn--prev");
+  _currentSlide = 0;
+  _maxSlide;
 
   render(data) {
     const markup = this._generateMarkup(data);
@@ -52,75 +56,73 @@ export default class FeaturedHouseView extends View {
     return markup;
   }
 
+  sliderButtonsState(pBtn, nBtn, curr, max) {
+    nBtn.classList.remove("btn--outline");
+    pBtn.classList.remove("btn--outline");
+
+    if (curr === 0) {
+      pBtn.classList.add("btn--outline");
+      nBtn.classList.remove("btn--outline");
+    } else if (curr === max - 3) {
+      pBtn.classList.remove("btn--outline");
+      nBtn.classList.add("btn--outline");
+    }
+
+    if (curr === 0) {
+      pBtn.classList.add("btn--outline");
+      nBtn.classList.remove("btn--outline");
+    } else if (curr === max - 3) {
+      pBtn.classList.remove("btn--outline");
+      nBtn.classList.add("btn--outline");
+    }
+  }
+
   sliderButtons() {
     const slides = document.querySelectorAll(".house-card");
-    const nextBtn = document.querySelector(".btn--next");
-    const prevBtn = document.querySelector(".btn--prev");
-    let currentSlide = 0;
-    const maxSlide = slides.length;
 
-    // slides.forEach((s, i) => {
-    //   s.style.transform = `translateX(${i * 100}%)`;
-    // });
+    this._maxSlide = slides.length;
 
     const prevSlide = function () {
-      if (currentSlide === 0) {
-        prevBtn.disabled = true;
+      if (this._currentSlide === 0) {
+        this._prevBtn.disabled = true;
       } else {
-        currentSlide--;
+        this._currentSlide--;
       }
-
-      prevBtn.disabled = false;
-      nextBtn.classList.remove("btn--outline");
-      prevBtn.classList.remove("btn--outline");
-
-      if (currentSlide === 0) {
-        prevBtn.classList.add("btn--outline");
-        nextBtn.classList.remove("btn--outline");
-      } else if (currentSlide === maxSlide - 3) {
-        prevBtn.classList.remove("btn--outline");
-        nextBtn.classList.add("btn--outline");
-      }
-
-      // slides.forEach((s, i) => {
-      //   s.style.transform = `translateX(${(i - currentSlide) * 39}rem)`;
-      // });
+      this._prevBtn.disabled = false;
+      this.sliderButtonsState(
+        this._prevBtn,
+        this._nextBtn,
+        this._currentSlide,
+        this._maxSlide
+      );
 
       this._parentElement.style.transform = `translateX(-${
-        currentSlide * 39
+        this._currentSlide * 39
       }rem)`;
     };
 
     const nextSlide = function () {
-      if (currentSlide === maxSlide - 3) {
-        nextBtn.disabled = true;
+      if (this._currentSlide === this._maxSlide - 3) {
+        this._nextBtn.disabled = true;
       } else {
-        currentSlide++;
+        this._currentSlide++;
       }
 
-      nextBtn.disabled = false;
-      nextBtn.classList.remove("btn--outline");
-      prevBtn.classList.remove("btn--outline");
-
-      if (currentSlide === 0) {
-        prevBtn.classList.add("btn--outline");
-        nextBtn.classList.remove("btn--outline");
-      }
-      if (currentSlide === maxSlide - 3) {
-        prevBtn.classList.remove("btn--outline");
-        nextBtn.classList.add("btn--outline");
-      }
+      this._nextBtn.disabled = false;
+      this.sliderButtonsState(
+        this._prevBtn,
+        this._nextBtn,
+        this._currentSlide,
+        this._maxSlide
+      );
 
       this._parentElement.style.transform = `translateX(-${
-        currentSlide * 39
+        this._currentSlide * 39
       }rem)`;
-      // slides.forEach((s, i) => {
-      //   s.style.transform = `translateX(${(i - currentSlide) * 39}rem)`;
-      // });
     };
 
-    prevBtn.addEventListener("click", prevSlide.bind(this));
-    nextBtn.addEventListener("click", nextSlide.bind(this));
+    this._prevBtn.addEventListener("click", prevSlide.bind(this));
+    this._nextBtn.addEventListener("click", nextSlide.bind(this));
   }
 
   changeButtonState(buttons, clickedButton) {
@@ -143,6 +145,15 @@ export default class FeaturedHouseView extends View {
         const type = e.target.dataset.filter;
         handler(type);
         this.changeButtonState(filterBtns, btn);
+        this._parentElement.style.transform = "translateX(0)";
+
+        this._currentSlide = 0;
+        this.sliderButtonsState(
+          this._prevBtn,
+          this._nextBtn,
+          this._currentSlide,
+          this._maxSlide
+        );
       });
     });
   }
