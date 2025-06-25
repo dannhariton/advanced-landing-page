@@ -59,9 +59,9 @@ export default class FeaturedHouseView extends View {
     let currentSlide = 0;
     const maxSlide = slides.length;
 
-    slides.forEach((s, i) => {
-      s.style.transform = `translateX(${i * 100}%)`;
-    });
+    // slides.forEach((s, i) => {
+    //   s.style.transform = `translateX(${i * 100}%)`;
+    // });
 
     const prevSlide = function () {
       if (currentSlide === 0) {
@@ -82,9 +82,13 @@ export default class FeaturedHouseView extends View {
         nextBtn.classList.add("btn--outline");
       }
 
-      slides.forEach((s, i) => {
-        s.style.transform = `translateX(${(i - currentSlide) * 100}%)`;
-      });
+      // slides.forEach((s, i) => {
+      //   s.style.transform = `translateX(${(i - currentSlide) * 39}rem)`;
+      // });
+
+      this._parentElement.style.transform = `translateX(-${
+        currentSlide * 39
+      }rem)`;
     };
 
     const nextSlide = function () {
@@ -107,13 +111,16 @@ export default class FeaturedHouseView extends View {
         nextBtn.classList.add("btn--outline");
       }
 
-      slides.forEach((s, i) => {
-        s.style.transform = `translateX(${(i - currentSlide) * 100}%)`;
-      });
+      this._parentElement.style.transform = `translateX(-${
+        currentSlide * 39
+      }rem)`;
+      // slides.forEach((s, i) => {
+      //   s.style.transform = `translateX(${(i - currentSlide) * 39}rem)`;
+      // });
     };
 
-    prevBtn.addEventListener("click", prevSlide);
-    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide.bind(this));
+    nextBtn.addEventListener("click", nextSlide.bind(this));
   }
 
   changeButtonState(buttons, clickedButton) {

@@ -304,13 +304,13 @@
 }
 
 .house-card {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
   padding-right: 3.2rem;
   transition: all 0.5s ease-out;
-  width: 39rem;
+  min-width: 39rem;
 
   &__image {
     height: 38.2rem;
