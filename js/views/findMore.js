@@ -24,7 +24,7 @@ export default class FindMore extends View {
     this._articles.forEach((article, i) => {
       if (i >= this._numOfArticle) return;
       markup += `
-      <div class="article" data-article="${i}">
+      <button class="article" data-article="${i}">
         <img
           src="${article.imageUrl}"
           alt="house image"
@@ -53,7 +53,7 @@ export default class FindMore extends View {
             <p class="article__read-time__date">${article.readTime} | ${article.publicationDate}</p>
           </div>
         </div>
-      </div>`;
+      </button>`;
     });
 
     return markup;
@@ -119,7 +119,8 @@ export default class FindMore extends View {
     this._parentElement.addEventListener("click", (e) => {
       this._mainArticleContainer.innerHTML = "";
 
-      const article = e.target.closest(".article").dataset.article;
+      const article = e.target.closest(".article")?.dataset.article;
+      console.log({ article });
       this.renderMainArticle(article);
     });
   }
