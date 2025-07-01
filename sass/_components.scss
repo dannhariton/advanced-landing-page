@@ -19,9 +19,13 @@
     padding: 1.2rem 2.4rem;
   }
 
-  &-icon--arrow {
+  &__icon {
     height: 2.4rem;
     width: 2.4rem;
+
+    &--inverted {
+      transform: rotate(180deg);
+    }
   }
 
   &-primary-icon {
@@ -34,7 +38,8 @@
     flex-direction: row-reverse;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 1px solid $color-primary-dark;
     background-color: $color-primary-dark;
   }
@@ -44,7 +49,8 @@
     color: $color-primary-dark;
     border: 1px solid $color-primary-dark;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $color-primary-light;
       color: $color-primary-dark;
       border: 1px solid $color-primary-dark;
@@ -53,11 +59,12 @@
 
   &--active {
     background-color: $color-primary-light;
-    border: $color-primary-light;
     color: $color-primary;
+    border: 1px solid $color-primary-light;
 
-    &:hover {
-      border: none;
+    &:hover,
+    &:focus {
+      border: 1px solid $color-primary-light;
       background-color: $color-primary-light;
     }
   }
@@ -173,6 +180,20 @@
   }
 }
 
+.section-label {
+  color: $color-secondary;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 3.2rem;
+    height: 1px;
+    background-color: $color-secondary;
+
+    transform: translate(-4rem, 0.8rem);
+  }
+}
+
 .input {
   background-color: $color-white;
   border-radius: 10rem;
@@ -278,6 +299,71 @@
 
     &__subheading {
       color: #68799f;
+    }
+  }
+}
+
+.house-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding-right: 3.2rem;
+  transition: all 0.5s ease-out;
+  min-width: 39rem;
+
+  &__image {
+    height: 38.2rem;
+    border-radius: 2.4rem;
+    object-fit: cover;
+  }
+
+  &__label {
+    position: absolute;
+    z-index: 10;
+    top: 33.2rem;
+    left: 1.6rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    &-title {
+      color: $color-black;
+    }
+
+    &-price {
+      color: $color-gray-3;
+      font-weight: 500;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    &-image {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+    }
+
+    &-information {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    &-name {
+      color: $color-black;
+      line-height: 2.4rem;
+    }
+
+    &-location {
+      color: $color-gray-2;
     }
   }
 }

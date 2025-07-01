@@ -1,0 +1,69 @@
+[
+  {
+    "houseImageURL": "assets/images/houses/woodlandside.webp",
+    "label": {
+      "name": "New House",
+      "type": "new-house",
+      "icon": "house"
+    },
+    "title": "Woodlandside",
+    "price": "$ 20.000.000",
+    "userInformation": {
+      "name": "Robert Fox",
+      "location": "Dr. San Jose, South Dakota",
+      "userImageURL": "assets/images/avatars/avatar-9.webp",
+      "type": "villa"
+    }
+  },
+
+  {
+    "houseImageURL": "assets/images/houses/the-old-lighthouse.webp",
+    "label": {
+      "name": "Best Deals",
+      "type": "best-deals",
+      "icon": "wallet"
+    },
+    "title": "The Old Lighthouse",
+    "price": "$ 44.000.000",
+    "userInformation": {
+      "name": "Ronald Richards",
+      "location": "Santa Ana, Illinois",
+      "userImageURL": "assets/images/avatars/avatar-3.webp",
+      "type": "villa"
+    }
+  },
+
+  {
+    "houseImageURL": "assets/images/houses/cosmos-house.webp",
+    "label": {
+      "name": "Popular",
+      "type": "popular",
+      "icon": "fire"
+    },
+    "title": "Cosmo's House",
+    "price": "$ 22.000.000",
+    "userInformation": {
+      "name": "Jenny Wilson",
+      "location": "Preston Rd. Inglewood, Maine 98380",
+      "userImageURL": "assets/images/avatars/avatar-6.webp",
+      "type": "villa"
+    }
+  },
+
+  {
+    "houseImageURL": "assets/images/houses/cosmos-house.webp",
+    "label": {
+      "name": "Popular",
+      "type": "popular",
+      "icon": "fire"
+    },
+    "title": "Cosmo's House",
+    "price": "$ 22.000.000",
+    "userInformation": {
+      "name": "Jenny Wilson",
+      "location": "Preston Rd. Inglewood, Maine 98380",
+      "userImageURL": "assets/images/avatars/avatar-6.webp",
+      "type": "villa"
+    }
+  }
+]
