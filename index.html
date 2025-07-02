@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hounter</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" src="/js/controller.js" defer></script>
   </head>
   <body>
@@ -207,6 +213,61 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="featured-house section-margin">
+        <p class="section-label label-style-text section">Our Recommendation</p>
+        <div class="featured-house__top section">
+          <h2 class="featured-house__top-heading heading-2">Featured House</h2>
+
+          <div class="featured-house__top__filter-container">
+            <button
+              class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter btn--active"
+              data-filter="house"
+              disabled
+            >
+              House
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#house"></use>
+              </svg>
+            </button>
+            <button
+              class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter"
+              data-filter="villa"
+            >
+              Villa
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#villa"></use>
+              </svg>
+            </button>
+            <button
+              class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter"
+              data-filter="apartment"
+            >
+              Apartment
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#apartment"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="featured-house__top__slider-container">
+            <button
+              class="btn btn-icon btn--outline btn__icon--inverted btn--prev"
+            >
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="btn btn-icon btn--next">
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="featured-house__cards"></div>
       </section>
 
       <section class="featured-house section section-margin">
