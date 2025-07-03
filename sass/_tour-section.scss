@@ -4,8 +4,8 @@
   min-height: 45.9rem;
   display: flex;
   justify-content: space-between;
-
   position: relative;
+
   &__left-side {
     display: flex;
     flex-direction: column;
@@ -77,7 +77,6 @@
   }
 
   &__gallery {
-    // width: 50%;
     height: 45.6rem;
     position: relative;
 
@@ -96,7 +95,6 @@
 
     &__image {
       object-fit: cover;
-
       width: 47.8rem;
       height: 41.6rem;
       filter: brightness(70%);
