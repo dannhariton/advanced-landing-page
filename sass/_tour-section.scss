@@ -1,0 +1,146 @@
+@use "base" as *;
+
+.tour-section {
+  min-height: 45.9rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &__left-side {
+    display: flex;
+    flex-direction: column;
+    margin: 2.8rem 10rem 2.7rem 0;
+    gap: 3.2rem;
+
+    &__headline {
+      &__heading {
+        color: $color-black;
+      }
+
+      &__text {
+        color: $color-gray-2;
+        opacity: 0.75;
+        padding-top: 1.6rem;
+        width: 80%;
+      }
+    }
+
+    &__details-container {
+      color: $color-black;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+
+    &__details {
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      row-gap: 1.3rem;
+      column-gap: 5.3rem;
+      color: $color-gray-3;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+      }
+    }
+
+    &__line {
+      border: 2px solid $color-gray-1;
+      width: 95%;
+    }
+
+    &__user {
+      display: flex;
+      width: 95%;
+      align-items: center;
+
+      &__image {
+        width: 5.6rem;
+        height: 5.6rem;
+        border-radius: 100%;
+        margin-right: 1.6rem;
+      }
+
+      &__name {
+        color: $color-black;
+      }
+
+      &__information {
+        flex: 1;
+      }
+      &__location {
+        color: $color-gray-2;
+      }
+    }
+  }
+
+  &__gallery {
+    height: 45.6rem;
+    position: relative;
+
+    &__video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__play-btn {
+      position: absolute;
+      width: 4.8rem;
+      height: 4.8rem;
+      z-index: 10;
+    }
+
+    &__image {
+      object-fit: cover;
+      width: 47.8rem;
+      height: 41.6rem;
+      filter: brightness(70%);
+    }
+
+    &__secondary {
+      &-container {
+        position: absolute;
+        bottom: 0;
+        left: -5rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 1.2rem;
+      }
+
+      &-image {
+        border-radius: 0.8rem;
+        object-fit: cover;
+        z-index: 11;
+
+        &--1 {
+          width: 29.6rem;
+          height: 16.8rem;
+        }
+
+        &--2 {
+          width: 9.6rem;
+          height: 8rem;
+        }
+
+        &--3 {
+          width: 9.6rem;
+          height: 8rem;
+        }
+      }
+    }
+  }
+}
+
+.blur-bg {
+  &--2 {
+    position: absolute;
+    z-index: -10;
+    right: -25%;
+    top: -60%;
+  }
+}
