@@ -17,3 +17,9 @@ export async function fetchApartmentData() {
   const json = await response.json();
   return json;
 }
+
+export async function handleReviews() {
+  const response = await fetch("./js/data/reviews.json");
+  const json = await response.json();
+  return json;
+}

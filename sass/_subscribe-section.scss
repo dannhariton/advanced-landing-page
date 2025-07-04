@@ -103,6 +103,7 @@
 .email {
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 
   &__icon {
     margin-left: 1.6rem;
@@ -124,8 +125,6 @@
       outline: none;
     }
   }
-
-  position: relative;
 
   &__error {
     color: $color-danger;
