@@ -324,7 +324,7 @@
   flex-direction: column;
   gap: 2.4rem;
   padding-right: 3.2rem;
-  width: 39rem;
+  min-width: 39rem;
 
   &__image {
     height: 38.2rem;

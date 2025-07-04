@@ -76,13 +76,13 @@
       color: $color-primary;
     }
   }
+}
 
-  .blur-bg {
-    &--3 {
-      position: absolute;
-      z-index: -10;
-      right: -30%;
-      top: -65%;
-    }
+.blur-bg {
+  &--3 {
+    position: absolute;
+    z-index: -10;
+    bottom: -100%;
+    right: -30%;
   }
 }

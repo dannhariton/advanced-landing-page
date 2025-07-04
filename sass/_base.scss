@@ -67,10 +67,12 @@ $color-gray-3: #626687;
 
 html {
   font-size: 62.5%; //1rem =10, 10px/16px = 62.5%
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Lexend", sans-serif;
+  overflow-x: hidden;
 }
 
 button {
