@@ -23,3 +23,9 @@ export async function handleReviews() {
   const json = await response.json();
   return json;
 }
+
+export async function handleArticles() {
+  const response = await fetch("./js/data/articles.json");
+  const json = await response.json();
+  return json;
+}
