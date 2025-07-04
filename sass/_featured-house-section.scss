@@ -27,8 +27,10 @@
 
   &__cards {
     max-width: 119.2rem;
-    position: relative;
     margin: 3.6rem auto;
     padding: 0 3rem;
+    transition: all 0.2s ease-out;
+
+    display: flex;
   }
 }

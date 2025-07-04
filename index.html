@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hounter</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" src="/js/controller.js" defer></script>
   </head>
   <body>
@@ -216,8 +222,9 @@
 
         <div class="featured-house__top__filter-container">
           <button
-            class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter"
+            class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter btn--active"
             data-filter="house"
+            disabled
           >
             House
             <svg class="btn__icon">
@@ -264,6 +271,11 @@
     </section>
 
     <section class="tour-section section section-margin">
+      <img
+        src="/assets/blur-2.svg"
+        alt="green blur background"
+        class="blur-bg--2"
+      />
       <div class="tour-section__left-side">
         <div class="tour-section__left-side__headline">
           <p
@@ -283,11 +295,6 @@
         </div>
 
         <div class="tour-section__left-side__details-container body-style-text">
-          <img
-            src="/assets/blur-2.svg"
-            alt="green blur background"
-            class="blur-bg--2"
-          />
           <span class="body-style-text--semibold">House Details</span>
           <div class="tour-section__left-side__details body-style-text--medium">
             <div class="tour-section__left-side__details__item">
@@ -304,7 +311,7 @@
             </div>
             <div class="tour-section__left-side__details__item">
               <svg class="btn__icon">
-                <use href="assets/icons.svg#car"></use>
+                <use href="assets/icons.svg#car "></use>
               </svg>
               1 Carport
             </div>
@@ -706,13 +713,13 @@
             2464 Royal Ln. Mesa, New Jersey 45463</a
           >
           <a
-            href="#"
+            href="tel:+6715550110"
             class="label-style-text footer__link footer__contact__link"
           >
             (671) 555-0110</a
           >
           <a
-            href="#"
+            href="mailto:info@hounter.com"
             class="label-style-text footer__link footer__contact__link"
           >
             info@hounter.com</a
