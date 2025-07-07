@@ -1,9 +1,11 @@
 import * as model from "../js/model.js";
 import FeaturedHouseView from "./views/featuredHouseView.js";
+import FormView from "./views/formView.js";
 import ReviewsView from "./views/reviewsView.js";
 
 const featuredHouseView = new FeaturedHouseView();
 const reviewsView = new ReviewsView();
+const formView = new FormView();
 
 const controlHouseCards = async function (type = "house") {
   const cacheKey = `${type}Cards`;
@@ -42,9 +44,20 @@ const controlReviews = async function () {
   reviewsView.checkActiveDot();
 };
 
+const controlTextarea = async function () {
+  formView.updateCharCount();
+};
+
+const controlSelect = async function () {
+  formView.selectOption();
+  formView.checkboxClick();
+};
+
 const init = async function () {
   featuredHouseView.addHandlerRender(controlHouseCards);
   featuredHouseView.filterButtons(controlHouseCards);
   reviewsView.addHandlerRender(controlReviews);
+  formView.checkTextLimit(controlTextarea);
+  controlSelect();
 };
 init();
