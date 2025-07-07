@@ -481,7 +481,7 @@
 .article {
   width: 58rem;
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
 
   &__image {
     width: 20rem;
@@ -510,13 +510,14 @@
     }
 
     &-name {
-      color: #3c4563;
+      color: $color-dark-blue;
     }
   }
 
   &__title {
     color: #1b1c57;
     padding-bottom: 1.6rem;
+    text-align: start;
   }
 
   &__information {
