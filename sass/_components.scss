@@ -212,6 +212,7 @@
   background-color: $color-white;
   border-radius: 10rem;
   padding: 0.4rem;
+  color: $color-black;
 
   display: flex;
   justify-content: space-between;
@@ -250,31 +251,6 @@
     }
   }
 }
-
-// .email {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: start;
-//   position: relative;
-
-//   &__error {
-//     color: $color-danger;
-//     padding-left: 2.8rem;
-//     padding-top: 0.8rem;
-//     position: absolute;
-//     z-index: 11;
-//     visibility: hidden;
-//     transform: translateY(3rem);
-//   }
-
-//   &-box:invalid:focus {
-//     border: 1px solid $color-danger;
-//   }
-
-//   &-box:invalid:focus ~ &__error {
-//     visibility: visible;
-//   }
-// }
 
 .recommended-card {
   display: flex;

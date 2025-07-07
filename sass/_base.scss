@@ -79,6 +79,13 @@ button {
   font-size: inherit;
   cursor: pointer;
   font-family: inherit;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
 }
 
 a {

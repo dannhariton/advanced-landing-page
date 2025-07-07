@@ -50,6 +50,7 @@ const controlTextarea = async function () {
 
 const controlSelect = async function () {
   formView.selectOption();
+  formView.checkboxClick();
 };
 
 const init = async function () {
