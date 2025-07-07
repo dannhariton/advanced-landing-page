@@ -28,16 +28,35 @@ export default class FormView extends View {
   selectOption() {
     this._selected.addEventListener("click", () => {
       this._optionsContainer.classList.toggle("active");
-      this._selectIcon.style.transform = "rotate(-90deg)";
+      this._optionsContainer.classList.contains("active")
+        ? (this._selectIcon.style.transform = "rotate(-90deg)")
+        : (this._selectIcon.style.transform = "rotate(90deg)");
     });
 
     this._optionsList.forEach((o) => {
       o.addEventListener("click", () => {
         this._selectedContent.innerHTML = o.querySelector("label").innerHTML;
-        this._selectBox.style.color = "$color-black";
+        this._selectedContent.style.color = "#1b1c57";
         this._optionsContainer.classList.remove("active");
         this._selectIcon.style.transform = "rotate(90deg)";
       });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!this._selectBox.contains(e.target) && e.target !== this._selected) {
+        this._selectIcon.style.transform = "rotate(90deg)";
+        this._optionsContainer.classList.remove("active");
+      }
+    });
+  }
+
+  checkboxClick() {
+    const checkbox = document.querySelector(".custom-checkbox");
+    checkbox.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        checkbox.closest("input").checked = !checkbox.closest("input").checked;
+      }
     });
   }
 }

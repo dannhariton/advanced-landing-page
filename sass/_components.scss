@@ -38,7 +38,8 @@
     flex-direction: row-reverse;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 1px solid $color-primary-dark;
     background-color: $color-primary-dark;
   }
@@ -48,7 +49,8 @@
     color: $color-primary-dark;
     border: 1px solid $color-primary-dark;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $color-primary-light;
       color: $color-primary-dark;
       border: 1px solid $color-primary-dark;
@@ -57,11 +59,12 @@
 
   &--active {
     background-color: $color-primary-light;
-    border: $color-primary-light;
     color: $color-primary;
+    border: 1px solid $color-primary-light;
 
-    &:hover {
-      border: none;
+    &:hover,
+    &:focus {
+      border: 1px solid $color-primary-light;
       background-color: $color-primary-light;
     }
   }
@@ -213,6 +216,7 @@
   background-color: $color-white;
   border-radius: 10rem;
   padding: 0.4rem;
+  color: $color-black;
 
   display: flex;
   justify-content: space-between;
@@ -251,31 +255,6 @@
     }
   }
 }
-
-// .email {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: start;
-//   position: relative;
-
-//   &__error {
-//     color: $color-danger;
-//     padding-left: 2.8rem;
-//     padding-top: 0.8rem;
-//     position: absolute;
-//     z-index: 11;
-//     visibility: hidden;
-//     transform: translateY(3rem);
-//   }
-
-//   &-box:invalid:focus {
-//     border: 1px solid $color-danger;
-//   }
-
-//   &-box:invalid:focus ~ &__error {
-//     visibility: visible;
-//   }
-// }
 
 .recommended-card {
   display: flex;
@@ -320,17 +299,18 @@
 }
 
 .house-card {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
   padding-right: 3.2rem;
-  width: 39rem;
+  min-width: 39rem;
 
   &__image {
     height: 38.2rem;
     object-fit: cover;
     border-radius: 2.4rem;
+    object-fit: cover;
   }
 
   &__label {
