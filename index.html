@@ -14,7 +14,6 @@
     <script type="module" src="/js/controller.js" defer></script>
   </head>
   <body>
-    <!-- <div class="container"> -->
     <header class="header">
       <svg class="navigation__logo">
         <use href="/assets/logos.svg#logo"></use>
@@ -66,599 +65,609 @@
         </div>
       </nav>
     </header>
-
-    <section class="hero-section section">
-      <img
-        src="/assets/blur-1.svg"
-        alt="green blur background"
-        class="blur-bg--1"
-      />
-      <div class="hero-left-side">
-        <h1 class="hero-left-side__heading heading-1">
-          find the place to live
-          <span class="hero-left-side__colored-text">your dreams</span> easily
-          here
-        </h1>
-
-        <p class="hero-left-side__p body-style-text">
-          Everything you need about finding your place to live will be here,
-          where it will be easier for you
-        </p>
-
-        <div class="search input">
-          <svg class="search__icon">
-            <use href="assets//icons.svg#location"></use>
-          </svg>
-          <input
-            type="text"
-            placeholder="Search for the location you want!"
-            class="search__box search label-style-text label-style-text--medium"
-          />
-          <button
-            class="btn btn-primary-icon label-style-text label-style-text--semibold"
-          >
-            Search
-            <svg class="btn__icon">
-              <use href="assets/icons.svg#arrow"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="hero-left-side__partnership">
-          <p class="hero-left-side__p body-style-text">Our Partnership</p>
-          <div class="hero-left-side__partnership-image-container">
-            <img
-              src="/assets//images/traveloka.webp"
-              alt="traveloka logo"
-              class="hero-left-side__partnership-image"
-            />
-            <img
-              src="/assets//images/ticket-com.webp"
-              alt="ticket.com logo"
-              class="hero-left-side__partnership-image"
-            />
-            <img
-              src="/assets//images/airbnb.webp"
-              alt="airbnb logo"
-              class="hero-left-side__partnership-image"
-            />
-            <img
-              src="/assets//images/tripadvisor.webp"
-              alt="tripadvisor logo"
-              class="hero-left-side__partnership-image"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="hero-section__image-container">
+    <main>
+      <section class="hero-section section">
         <img
-          src="/assets//images/hero-right-side.webp"
-          alt="White House"
-          class="hero-section__image"
+          src="/assets/blur-1.svg"
+          alt="green blur background"
+          class="blur-bg--1"
         />
-        <div class="hero-section__recommended-wrapper">
-          <div class="hero-section__recommended">
-            <div class="recommended-card">
-              <div class="recommended-card__images-container">
-                <img
-                  src="assets/images/avatars/avatar-20.webp"
-                  alt="Person Avatar picture"
-                  class="recommended-card__image"
-                />
-                <img
-                  src="assets/images/avatars/avatar-17.webp"
-                  alt="Person Avatar picture"
-                  class="recommended-card__image"
-                />
-                <img
-                  src="assets/images/avatars/avatar-6.webp"
-                  alt="Person Avatar picture"
-                  class="recommended-card__image"
-                />
-              </div>
-              <div class="recommended-card__text-container">
-                <p
-                  class="recommended-card__text-container__heading body-style-text--semibold body-style-text"
-                >
-                  1K+ People
-                </p>
-                <p
-                  class="recommended-card__text-container__subheading label-style-text label-style-text--small"
-                >
-                  Successfully Getting Home
-                </p>
-              </div>
-            </div>
-            <div class="recommended-card">
-              <div class="recommended-card__images-container">
-                <img
-                  src="assets/images/recommned-house.webp"
-                  alt="Person Avatar picture"
-                  class="recommended-card__image recommended-card__image recommended-card__image--house"
-                />
-              </div>
-              <div class="recommended-card__text-container">
-                <p
-                  class="recommended-card__text-container__heading body-style-text--semibold body-style-text"
-                >
-                  56 Houses
-                </p>
-                <p
-                  class="recommended-card__text-container__subheading label-style-text label-style-text--small"
-                >
-                  Sold Monthly
-                </p>
-              </div>
-            </div>
-            <div class="recommended-card">
-              <div class="recommended-card__images-container">
-                <img
-                  src="assets/images/avatars/avatar-10.webp"
-                  alt="Person Avatar picture"
-                  class="recommended-card__image recommended-card__image"
-                />
-              </div>
-              <div class="recommended-card__text-container">
-                <p
-                  class="recommended-card__text-container__heading body-style-text--semibold body-style-text"
-                >
-                  4K+
-                </p>
-                <p
-                  class="recommended-card__text-container__subheading label-style-text label-style-text--small"
-                >
-                  People looking for New Houses
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="hero-left-side">
+          <h1 class="hero-left-side__heading heading-1">
+            find the place to live
+            <span class="hero-left-side__colored-text">your dreams</span> easily
+            here
+          </h1>
 
-    <section class="featured-house section-margin">
-      <p class="section-label label-style-text section">Our Recommendation</p>
-      <div class="featured-house__top section">
-        <h2 class="featured-house__top-heading heading-2">Featured House</h2>
-
-        <div class="featured-house__top__filter-container">
-          <button
-            class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter btn--active"
-            data-filter="house"
-            disabled
-          >
-            House
-            <svg class="btn__icon">
-              <use href="assets/icons.svg#house"></use>
-            </svg>
-          </button>
-          <button
-            class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter"
-            data-filter="villa"
-          >
-            Villa
-            <svg class="btn__icon">
-              <use href="assets/icons.svg#villa"></use>
-            </svg>
-          </button>
-          <button
-            class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter"
-            data-filter="apartment"
-          >
-            Apartment
-            <svg class="btn__icon">
-              <use href="assets/icons.svg#apartment"></use>
-            </svg>
-          </button>
-        </div>
-
-        <div class="featured-house__top__slider-container">
-          <button
-            class="btn btn-icon btn--outline btn__icon--inverted btn--prev"
-          >
-            <svg class="btn__icon">
-              <use href="assets/icons.svg#arrow"></use>
-            </svg>
-          </button>
-          <button class="btn btn-icon btn--next">
-            <svg class="btn__icon">
-              <use href="assets/icons.svg#arrow"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="featured-house__cards"></div>
-    </section>
-
-    <section class="tour-section section section-margin">
-      <img
-        src="/assets/blur-2.svg"
-        alt="green blur background"
-        class="blur-bg--2"
-      />
-      <div class="tour-section__left-side">
-        <div class="tour-section__left-side__headline">
-          <p
-            class="tour-section__left-side__headline__label section-label label-style-text"
-          >
-            Ready to Sell
+          <p class="hero-left-side__p body-style-text">
+            Everything you need about finding your place to live will be here,
+            where it will be easier for you
           </p>
-          <h2 class="tour-section__left-side__headline__heading heading-2">
-            Let's Tour And See Our House!
-          </h2>
-          <p
-            class="tour-section__left-side__headline__text tour-section__left-side__text body-style-text"
-          >
-            Houses recommended by our partners that have been curated to become
-            the home of your dreams!
-          </p>
-        </div>
 
-        <div class="tour-section__left-side__details-container body-style-text">
-          <span class="body-style-text--semibold">House Details</span>
-          <div class="tour-section__left-side__details body-style-text--medium">
-            <div class="tour-section__left-side__details__item">
-              <svg class="btn__icon">
-                <use href="assets/icons.svg#beds"></use>
-              </svg>
-              4 Bedrooms
-            </div>
-            <div class="tour-section__left-side__details__item">
-              <svg class="btn__icon">
-                <use href="assets/icons.svg#bath"></use>
-              </svg>
-              2 Bathrooms
-            </div>
-            <div class="tour-section__left-side__details__item">
-              <svg class="btn__icon">
-                <use href="assets/icons.svg#car "></use>
-              </svg>
-              1 Carport
-            </div>
-            <div class="tour-section__left-side__details__item">
-              <svg class="btn__icon">
-                <use href="assets/icons.svg#stairs"></use>
-              </svg>
-              2 Floors
-            </div>
-          </div>
-        </div>
-
-        <hr class="tour-section__left-side__line" />
-
-        <div class="tour-section__left-side__user">
-          <img
-            src="/assets/images/avatars/avatar-12.webp"
-            alt="contact user image"
-            class="tour-section__left-side__user__image"
-          />
-          <div class="tour-section__left-side__user__information">
-            <p class="tour-section__left-side__user__name subtitle">
-              Dianne Russell
-            </p>
-            <p class="tour-section__left-side__user__location label-style-text">
-              Manchester, Kentucky
-            </p>
-          </div>
-          <button
-            class="btn btn-primary-icon btn--left label-style-text label-style-text--semibold tour-section__left-side__user__contact-btn"
-          >
-            Contact Now
-            <svg class="btn__icon">
-              <use href="assets/icons.svg#call"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="tour-section__gallery">
-        <div class="tour-section__gallery__video-container">
-          <a href="https://imgur.com/a/DKjj4Oi">
-            <img
-              src="assets/images/tour-section-composition/house.webp"
-              alt="House Video"
-              class="tour-section__gallery__image"
-            />
-          </a>
-          <svg class="tour-section__gallery__play-btn">
-            <use href="assets/play.svg#Play"></use>
-          </svg>
-        </div>
-        <div class="tour-section__gallery__secondary-container">
-          <img
-            src="assets/images/tour-section-composition/couch.webp"
-            alt="House Video"
-            class="tour-section__gallery__secondary-image tour-section__gallery__secondary-image--1"
-          />
-          <img
-            src="assets/images/tour-section-composition/drawer.webp"
-            alt="House Video"
-            class="tour-section__gallery__secondary-image tour-section__gallery__secondary-image--2"
-          />
-          <img
-            src="assets/images/tour-section-composition/chair.webp"
-            alt="House Video"
-            class="tour-section__gallery__secondary-image tour-section__gallery__secondary-image--3"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section class="reviews section-margin">
-      <div class="reviews__headline">
-        <p class="reviews__headline__label section-label-top label-style-text">
-          See Our Review
-        </p>
-        <h2 class="reviews__headline__heading heading-2">
-          What Our User Say About Us
-        </h2>
-      </div>
-
-      <div class="reviews__container-wrapper">
-        <div class="reviews__container"></div>
-      </div>
-
-      <div class="reviews__pagination"></div>
-    </section>
-
-    <section class="find-more section section-margin">
-      <div class="find-more__headline">
-        <p
-          class="find-more__headline__label section-label-top label-style-text"
-        >
-          See tips and trick from our partnership
-        </p>
-        <h2 class="find-more__headline__heading heading-2">
-          Find out more about selling and buying homes
-        </h2>
-      </div>
-
-      <button
-        class="btn btn-primary label-style-text label-style-text--semibold find-more__button"
-      >
-        More Articles
-      </button>
-
-      <div class="find-more__container">
-        <div class="find-more__articles"></div>
-
-        <div class="find-more__main-article"></div>
-      </div>
-
-      <div class="find-more__pagination"></div>
-    </section>
-
-    <section class="subscribe section section-margin">
-      <div class="subscribe-container">
-        <img
-          src="/assets/images/subscribe/white-chair.webp"
-          alt="white chair"
-          class="subscribe__image subscribe__image--1"
-        />
-        <img
-          src="/assets/images/avatars/avatar-9.webp"
-          alt="avatar"
-          class="subscribe__image subscribe__image--2"
-        />
-        <img
-          src="/assets/images/avatars/avatar-6.webp"
-          alt="avatar"
-          class="subscribe__image subscribe__image--3"
-        />
-        <img
-          src="/assets/images/subscribe/house.webp"
-          alt="house"
-          class="subscribe__image subscribe__image--4"
-        />
-        <img
-          src="/assets/images/avatars/avatar-10.webp"
-          alt="avatar"
-          class="subscribe__image subscribe__image--5"
-        />
-        <img
-          src="/assets/images/avatars/avatar-12.webp"
-          alt="avatar"
-          class="subscribe__image subscribe__image--6"
-        />
-        <img
-          src="/assets/images/subscribe/roof.webp"
-          alt="rooftop"
-          class="subscribe__image subscribe__image--7"
-        />
-        <img
-          src="/assets/images/subscribe/chair.webp"
-          alt="chair"
-          class="subscribe__image subscribe__image--8"
-        />
-        <div class="subscribe__main-content">
-          <h2 class="subscribe__heading heading-2">
-            Subscribe for More Info And Update From hounter
-          </h2>
-          <div class="email input subscribe__email">
-            <svg class="email__icon">
-              <use href="assets//icons.svg#mail"></use>
+          <div class="search input">
+            <svg class="search__icon">
+              <use href="assets//icons.svg#location"></use>
             </svg>
             <input
-              type="email"
-              placeholder="Your email here"
-              class="email email__box input label-style-text label-style-text--medium"
-              required
+              type="text"
+              placeholder="Search for the location you want!"
+              class="search__box search label-style-text label-style-text--medium"
             />
-            <span class="email__error label-style-text label-style-text--small"
-              >Field error. Please fix it</span
-            >
             <button
-              class="btn btn-primary label-style-text label-style-text--semibold"
+              class="btn btn-primary-icon label-style-text label-style-text--semibold"
             >
-              Subscribe Now
+              Search
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="hero-left-side__partnership">
+            <p class="hero-left-side__p body-style-text">Our Partnership</p>
+            <div class="hero-left-side__partnership-image-container">
+              <img
+                src="/assets//images/traveloka.webp"
+                alt="traveloka logo"
+                class="hero-left-side__partnership-image"
+              />
+              <img
+                src="/assets//images/ticket-com.webp"
+                alt="ticket.com logo"
+                class="hero-left-side__partnership-image"
+              />
+              <img
+                src="/assets//images/airbnb.webp"
+                alt="airbnb logo"
+                class="hero-left-side__partnership-image"
+              />
+              <img
+                src="/assets//images/tripadvisor.webp"
+                alt="tripadvisor logo"
+                class="hero-left-side__partnership-image"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="hero-section__image-container">
+          <img
+            src="/assets//images/hero-right-side.webp"
+            alt="White House"
+            class="hero-section__image"
+          />
+          <div class="hero-section__recommended-wrapper">
+            <div class="hero-section__recommended">
+              <div class="recommended-card">
+                <div class="recommended-card__images-container">
+                  <img
+                    src="assets/images/avatars/avatar-20.webp"
+                    alt="Person Avatar picture"
+                    class="recommended-card__image"
+                  />
+                  <img
+                    src="assets/images/avatars/avatar-17.webp"
+                    alt="Person Avatar picture"
+                    class="recommended-card__image"
+                  />
+                  <img
+                    src="assets/images/avatars/avatar-6.webp"
+                    alt="Person Avatar picture"
+                    class="recommended-card__image"
+                  />
+                </div>
+                <div class="recommended-card__text-container">
+                  <p
+                    class="recommended-card__text-container__heading body-style-text--semibold body-style-text"
+                  >
+                    1K+ People
+                  </p>
+                  <p
+                    class="recommended-card__text-container__subheading label-style-text label-style-text--small"
+                  >
+                    Successfully Getting Home
+                  </p>
+                </div>
+              </div>
+              <div class="recommended-card">
+                <div class="recommended-card__images-container">
+                  <img
+                    src="assets/images/recommned-house.webp"
+                    alt="Person Avatar picture"
+                    class="recommended-card__image recommended-card__image recommended-card__image--house"
+                  />
+                </div>
+                <div class="recommended-card__text-container">
+                  <p
+                    class="recommended-card__text-container__heading body-style-text--semibold body-style-text"
+                  >
+                    56 Houses
+                  </p>
+                  <p
+                    class="recommended-card__text-container__subheading label-style-text label-style-text--small"
+                  >
+                    Sold Monthly
+                  </p>
+                </div>
+              </div>
+              <div class="recommended-card">
+                <div class="recommended-card__images-container">
+                  <img
+                    src="assets/images/avatars/avatar-10.webp"
+                    alt="Person Avatar picture"
+                    class="recommended-card__image recommended-card__image"
+                  />
+                </div>
+                <div class="recommended-card__text-container">
+                  <p
+                    class="recommended-card__text-container__heading body-style-text--semibold body-style-text"
+                  >
+                    4K+
+                  </p>
+                  <p
+                    class="recommended-card__text-container__subheading label-style-text label-style-text--small"
+                  >
+                    People looking for New Houses
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-house section-margin">
+        <p class="section-label label-style-text section">Our Recommendation</p>
+        <div class="featured-house__top section">
+          <h2 class="featured-house__top-heading heading-2">Featured House</h2>
+
+          <div class="featured-house__top__filter-container">
+            <button
+              class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter btn--active"
+              data-filter="house"
+              disabled
+            >
+              House
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#house"></use>
+              </svg>
+            </button>
+            <button
+              class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter"
+              data-filter="villa"
+            >
+              Villa
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#villa"></use>
+              </svg>
+            </button>
+            <button
+              class="btn btn--outline btn-primary-icon btn--left label-style-text label-style-text--semibold btn--filter"
+              data-filter="apartment"
+            >
+              Apartment
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#apartment"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="featured-house__top__slider-container">
+            <button
+              class="btn btn-icon btn--outline btn__icon--inverted btn--prev"
+            >
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="btn btn-icon btn--next">
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#arrow"></use>
+              </svg>
             </button>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="form section section-margin">
-      <div class="form__left">
-        <h3 class="heading-3">Would you like to Join?</h3>
-        <div class="form__left__text-container body-style-text">
-          <p class="form__left__text">
-            Quickly get three quotes from these local that people love in online
-            reviews.
-          </p>
-          <hr class="form__left__break" />
-          <p class="form__left__text">
-            Pick the whose estimate suits you best.
-          </p>
-          <hr class="form__left__break" />
-          <p class="form__left__text">
-            We then make sure the work i done to your complete satisfaction.
-          </p>
-        </div>
-        <div class="form__left__logo-container">
-          <img
-            src="assets/images/form-logo.webp"
-            alt="form logo"
-            class="form__left__logo"
-          />
-        </div>
-      </div>
-      <div class="form__right">
-        <form action="#" class="form__form">
-          <div class="form__row">
-            <label
-              class="label-style-text label-style-text--medium form__label"
-              for="name"
-              >Name</label
+        <div class="featured-house__cards"></div>
+      </section>
+
+      <section class="tour-section section section-margin">
+        <img
+          src="/assets/blur-2.svg"
+          alt="green blur background"
+          class="blur-bg--2"
+        />
+        <div class="tour-section__left-side">
+          <div class="tour-section__left-side__headline">
+            <p
+              class="tour-section__left-side__headline__label section-label label-style-text"
             >
-            <input
-              class="form__row-input-text input"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-            />
+              Ready to Sell
+            </p>
+            <h2 class="tour-section__left-side__headline__heading heading-2">
+              Let's Tour And See Our House!
+            </h2>
+            <p
+              class="tour-section__left-side__headline__text tour-section__left-side__text body-style-text"
+            >
+              Houses recommended by our partners that have been curated to
+              become the home of your dreams!
+            </p>
           </div>
 
-          <div class="form__row">
-            <label
-              class="label-style-text label-style-text--medium form__label"
-              for="surname"
-            >
-              Surname
-            </label>
-            <input
-              class="form__row-input-text input"
-              type="text"
-              id="surname"
-              name="lastname"
-              placeholder="Your Surname"
-            />
-          </div>
-
-          <div class="form__row">
-            <label
-              class="label-style-text label-style-text--medium form__label"
-              for="education"
-              >Education</label
-            >
-
+          <div
+            class="tour-section__left-side__details-container body-style-text"
+          >
+            <span class="body-style-text--semibold">House Details</span>
             <div
-              class="select-box input label-style-text label-style-text--medium"
+              class="tour-section__left-side__details body-style-text--medium"
             >
-              <button class="selected" type="button">
-                <p class="selected__text label-style-text">Select</p>
-                <svg class="selected__icon">
-                  <use href="assets/icons.svg#arrow"></use>
+              <div class="tour-section__left-side__details__item">
+                <svg class="btn__icon">
+                  <use href="assets/icons.svg#beds"></use>
                 </svg>
-              </button>
-              <div class="select-box__options-container">
-                <button type="button" class="select-box__option">
-                  <input
-                    type="radio"
-                    class="radio"
-                    id="Highschool"
-                    name="category"
-                  />
-                  <label for="sports">Highschool</label>
-                </button>
-
-                <button type="button" class="select-box__option">
-                  <input
-                    type="radio"
-                    class="radio"
-                    id="React"
-                    name="category"
-                  />
-                  <label for="sports">React</label>
-                </button>
-
-                <button type="button" class="select-box__option">
-                  <input
-                    type="radio"
-                    class="radio"
-                    id="university"
-                    name="category"
-                  />
-                  <label for="news">University</label>
-                </button>
-
-                <button class="select-box__option" type="button">
-                  <input
-                    type="radio"
-                    class="radio"
-                    id="Masters"
-                    name="category"
-                  />
-                  <label for="tutorials">Master</label>
-                </button>
+                4 Bedrooms
+              </div>
+              <div class="tour-section__left-side__details__item">
+                <svg class="btn__icon">
+                  <use href="assets/icons.svg#bath"></use>
+                </svg>
+                2 Bathrooms
+              </div>
+              <div class="tour-section__left-side__details__item">
+                <svg class="btn__icon">
+                  <use href="assets/icons.svg#car "></use>
+                </svg>
+                1 Carport
+              </div>
+              <div class="tour-section__left-side__details__item">
+                <svg class="btn__icon">
+                  <use href="assets/icons.svg#stairs"></use>
+                </svg>
+                2 Floors
               </div>
             </div>
           </div>
 
-          <div class="form__row">
-            <label
-              class="label-style-text label-style-text--medium form__label form__label-textarea"
-              for="form-textarea"
+          <hr class="tour-section__left-side__line" />
+
+          <div class="tour-section__left-side__user">
+            <img
+              src="/assets/images/avatars/avatar-12.webp"
+              alt="contact user image"
+              class="tour-section__left-side__user__image"
+            />
+            <div class="tour-section__left-side__user__information">
+              <p class="tour-section__left-side__user__name subtitle">
+                Dianne Russell
+              </p>
+              <p
+                class="tour-section__left-side__user__location label-style-text"
+              >
+                Manchester, Kentucky
+              </p>
+            </div>
+            <button
+              class="btn btn-primary-icon btn--left label-style-text label-style-text--semibold tour-section__left-side__user__contact-btn"
             >
-              Message
-            </label>
-            <textarea
-              id="form-textarea"
-              class="input form__row-text-area"
-              maxlength="500"
-              placeholder="Message"
-            ></textarea>
-            <div class="form__row-text-area-counter">
-              <span id="currentCount">0</span> / <span id="maxLength">500</span>
+              Contact Now
+              <svg class="btn__icon">
+                <use href="assets/icons.svg#call"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="tour-section__gallery">
+          <div class="tour-section__gallery__video-container">
+            <a href="https://imgur.com/a/DKjj4Oi">
+              <img
+                src="assets/images/tour-section-composition/house.webp"
+                alt="House Video"
+                class="tour-section__gallery__image"
+              />
+            </a>
+            <svg class="tour-section__gallery__play-btn">
+              <use href="assets/play.svg#Play"></use>
+            </svg>
+          </div>
+          <div class="tour-section__gallery__secondary-container">
+            <img
+              src="assets/images/tour-section-composition/couch.webp"
+              alt="House Video"
+              class="tour-section__gallery__secondary-image tour-section__gallery__secondary-image--1"
+            />
+            <img
+              src="assets/images/tour-section-composition/drawer.webp"
+              alt="House Video"
+              class="tour-section__gallery__secondary-image tour-section__gallery__secondary-image--2"
+            />
+            <img
+              src="assets/images/tour-section-composition/chair.webp"
+              alt="House Video"
+              class="tour-section__gallery__secondary-image tour-section__gallery__secondary-image--3"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section-margin">
+        <div class="reviews__headline">
+          <p
+            class="reviews__headline__label section-label-top label-style-text"
+          >
+            See Our Review
+          </p>
+          <h2 class="reviews__headline__heading heading-2">
+            What Our User Say About Us
+          </h2>
+        </div>
+
+        <div class="reviews__container-wrapper">
+          <div class="reviews__container"></div>
+        </div>
+
+        <div class="reviews__pagination"></div>
+      </section>
+
+      <section class="find-more section section-margin">
+        <div class="find-more__headline">
+          <p
+            class="find-more__headline__label section-label-top label-style-text"
+          >
+            See tips and trick from our partnership
+          </p>
+          <h2 class="find-more__headline__heading heading-2">
+            Find out more about selling and buying homes
+          </h2>
+        </div>
+
+        <button
+          class="btn btn-primary label-style-text label-style-text--semibold find-more__button"
+        >
+          More Articles
+        </button>
+
+        <div class="find-more__container">
+          <div class="find-more__articles"></div>
+
+          <div class="find-more__main-article"></div>
+        </div>
+
+        <div class="find-more__pagination"></div>
+      </section>
+
+      <section class="subscribe section section-margin">
+        <div class="subscribe-container">
+          <img
+            src="/assets/images/subscribe/white-chair.webp"
+            alt="white chair"
+            class="subscribe__image subscribe__image--1"
+          />
+          <img
+            src="/assets/images/avatars/avatar-9.webp"
+            alt="avatar"
+            class="subscribe__image subscribe__image--2"
+          />
+          <img
+            src="/assets/images/avatars/avatar-6.webp"
+            alt="avatar"
+            class="subscribe__image subscribe__image--3"
+          />
+          <img
+            src="/assets/images/subscribe/house.webp"
+            alt="house"
+            class="subscribe__image subscribe__image--4"
+          />
+          <img
+            src="/assets/images/avatars/avatar-10.webp"
+            alt="avatar"
+            class="subscribe__image subscribe__image--5"
+          />
+          <img
+            src="/assets/images/avatars/avatar-12.webp"
+            alt="avatar"
+            class="subscribe__image subscribe__image--6"
+          />
+          <img
+            src="/assets/images/subscribe/roof.webp"
+            alt="rooftop"
+            class="subscribe__image subscribe__image--7"
+          />
+          <img
+            src="/assets/images/subscribe/chair.webp"
+            alt="chair"
+            class="subscribe__image subscribe__image--8"
+          />
+          <div class="subscribe__main-content">
+            <h2 class="subscribe__heading heading-2">
+              Subscribe for More Info And Update From hounter
+            </h2>
+            <div class="email input subscribe__email">
+              <svg class="email__icon">
+                <use href="assets//icons.svg#mail"></use>
+              </svg>
+              <input
+                type="email"
+                placeholder="Your email here"
+                class="email email__box input label-style-text label-style-text--medium"
+                required
+              />
+              <span
+                class="email__error label-style-text label-style-text--small"
+                >Field error. Please fix it</span
+              >
+              <button
+                class="btn btn-primary label-style-text label-style-text--semibold"
+              >
+                Subscribe Now
+              </button>
             </div>
           </div>
-        </form>
-        <div class="form__row form__checkbox">
-          <input class="custom-checkbox" id="myCheckbox" type="checkbox" />
-          <label
-            for="myCheckbox"
-            class="custom-checkbox__label label-style-text"
-          >
-            <svg class="checkbox-icon">
-              <use href="/assets/icons.svg#check"></use>
-            </svg>
-            I give consent to the processing of my personal data given in the
-            contact form above under the terms and conditions of Grid Dynamics
-            Privacy Policy.
-          </label>
         </div>
+      </section>
 
-        <div class="form__row">
-          <input
-            id="submit"
-            type="submit"
-            value="Join Now"
-            class="btn btn-primary form__submit"
-          />
+      <section class="form section section-margin">
+        <div class="form__left">
+          <h3 class="heading-3">Would you like to Join?</h3>
+          <div class="form__left__text-container body-style-text">
+            <p class="form__left__text">
+              Quickly get three quotes from these local that people love in
+              online reviews.
+            </p>
+            <hr class="form__left__break" />
+            <p class="form__left__text">
+              Pick the whose estimate suits you best.
+            </p>
+            <hr class="form__left__break" />
+            <p class="form__left__text">
+              We then make sure the work i done to your complete satisfaction.
+            </p>
+          </div>
+          <div class="form__left__logo-container">
+            <img
+              src="assets/images/form-logo.webp"
+              alt="form logo"
+              class="form__left__logo"
+            />
+          </div>
         </div>
-      </div>
-    </section>
+        <div class="form__right">
+          <form action="#" class="form__form">
+            <div class="form__row">
+              <label
+                class="label-style-text label-style-text--medium form__label"
+                for="name"
+                >Name</label
+              >
+              <input
+                class="form__row-input-text input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+              />
+            </div>
 
+            <div class="form__row">
+              <label
+                class="label-style-text label-style-text--medium form__label"
+                for="surname"
+              >
+                Surname
+              </label>
+              <input
+                class="form__row-input-text input"
+                type="text"
+                id="surname"
+                name="lastname"
+                placeholder="Your Surname"
+              />
+            </div>
+
+            <div class="form__row">
+              <label
+                class="label-style-text label-style-text--medium form__label"
+                for="education"
+                >Education</label
+              >
+
+              <div
+                class="select-box input label-style-text label-style-text--medium"
+              >
+                <button class="selected" type="button">
+                  <p class="selected__text label-style-text">Select</p>
+                  <svg class="selected__icon">
+                    <use href="assets/icons.svg#arrow"></use>
+                  </svg>
+                </button>
+                <div class="select-box__options-container">
+                  <button type="button" class="select-box__option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="Highschool"
+                      name="category"
+                    />
+                    <label for="sports">Highschool</label>
+                  </button>
+
+                  <button type="button" class="select-box__option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="React"
+                      name="category"
+                    />
+                    <label for="sports">React</label>
+                  </button>
+
+                  <button type="button" class="select-box__option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="university"
+                      name="category"
+                    />
+                    <label for="news">University</label>
+                  </button>
+
+                  <button class="select-box__option" type="button">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="Masters"
+                      name="category"
+                    />
+                    <label for="tutorials">Master</label>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <label
+                class="label-style-text label-style-text--medium form__label form__label-textarea"
+                for="form-textarea"
+              >
+                Message
+              </label>
+              <textarea
+                id="form-textarea"
+                class="input form__row-text-area"
+                maxlength="500"
+                placeholder="Message"
+              ></textarea>
+              <div class="form__row-text-area-counter">
+                <span id="currentCount">0</span> /
+                <span id="maxLength">500</span>
+              </div>
+            </div>
+          </form>
+          <div class="form__row form__checkbox">
+            <input class="custom-checkbox" id="myCheckbox" type="checkbox" />
+            <label
+              for="myCheckbox"
+              class="custom-checkbox__label label-style-text"
+            >
+              <svg class="checkbox-icon">
+                <use href="/assets/icons.svg#check"></use>
+              </svg>
+              I give consent to the processing of my personal data given in the
+              contact form above under the terms and conditions of Grid Dynamics
+              Privacy Policy.
+            </label>
+          </div>
+
+          <div class="form__row">
+            <input
+              id="submit"
+              type="submit"
+              value="Join Now"
+              class="btn btn-primary form__submit"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer section section-margin">
       <img
         src="/assets/blur-3.svg"
