@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "sass --watch sass/main.scss css/main.css",
-    "kit": "sass --watch sass/kit.scss css/kit.css"
-  },
   "keywords": [],
   "author": "Dan Hariton",
   "license": "ISC",
