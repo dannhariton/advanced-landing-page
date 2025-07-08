@@ -15,4 +15,4 @@ Clone the repo and use these scripts for sass.
 
 ## Live Version
 
-[Hounter](https://dannhariton.github.io/advanced-landing-page/)
+[Hounter](https://advanced-landing-page-seven.vercel.app)
