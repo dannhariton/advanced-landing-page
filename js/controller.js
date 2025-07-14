@@ -65,12 +65,12 @@ const controlArticles = async function () {
   findMore.onArticleClick();
 };
 
-const init = async function () {
+function init() {
   featuredHouseView.addHandlerRender(controlHouseCards);
   featuredHouseView.filterButtons(controlHouseCards);
   reviewsView.addHandlerRender(controlReviews);
   formView.checkTextLimit(controlTextarea);
   controlSelect();
   controlArticles();
-};
+}
 init();
